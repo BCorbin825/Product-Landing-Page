@@ -1,14 +1,22 @@
+/* ----------------- Variables ----------------- */
+:root {
+  --text-color: #ededed;
+}
+
+/* ------------------ Styling ------------------ */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   background: radial-gradient(50.53% 50.53% at 50.23% 49.47%, #414d59 0%, #1d2631 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: 'Helvetica', sans-serif;
   font-weight: bold;
-  color: #ededed;
+  color: var(--text-color);
+  min-height: 100vh;
 }
 
 #top-bar {
@@ -20,19 +28,20 @@ body {
   display: flex;
   position: fixed;
   min-height: 75px;
-  padding: 0px 20px;
   justify-content: space-between;
   align-items: center;
 }
 
+
 #logo {
-  width: 60vw;
+  width: 33vw;
 }
 
 #header-img {
   width: 100%;
   height: 100%;
   max-width: 300px;
+  padding: 0px 20px;
   filter: invert(95%);
   display: flex;
   justify-content: center;
@@ -41,43 +50,73 @@ body {
   margin-left: 20px;
 }
 
-nav > ul {
+#nav-list {
+  list-style: none;
   display: flex;
-  width: 30vw;
+  width: 35vw;
+  min-width: 30vw;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.nav-link {
-  list-style: none;
+#nav-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.nav-link a {
+  font-size: 1.1rem;
 }
 
 a {
   text-decoration: none;
-  color: var(--color-theme);
+  color: var(--text-color);
+}
+
+.nav-link {
+  border-bottom: 0;
+  transition: border-bottom 1s;
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid var(--text-color);
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  width: 31.5vw;
+  justify-content: flex-end;
+}
+
+.icon {
+  padding-right: 30px;
+  transition: all 0.2s ease;
+}
+
+.icon:hover {
+  transform: translateY(-5px);
 }
 
 .hidden {
   display: none;
 }
 
-@media (max-width: 1000px) {
-  #logo {
-    width: 55vw;
-  }
+#shopping-cart {
+  margin-bottom: 5px;
 }
 
-@media (max-width: 768px) {
-  #header {
-    justify-content: flex-end;
-  }
-
-  .nav-link {
+/* ------------------- Media ------------------- */
+@media (max-width: 1000px) {
+  #nav-list .nav-link {
     display: none;
   }
 
   .hidden {
     display: flex;
-    justify-content: flex-end;
   }
 }
+
+/* ---------------- Animations ---------------- */
