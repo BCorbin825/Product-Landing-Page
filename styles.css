@@ -1,19 +1,18 @@
 /* ---------------------------------- Variables ---------------------------------- */
 :root {
   --text-color: #ededed;
-  --hover-color: #CCCCCC;
+  --hover-color: #D4AF37;
 }
 
 /* ----------------------------------- Styling ----------------------------------- */
 
-/* ------------- Top Bar Section ------------- */
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background: radial-gradient(50.53% 50.53% at 50.23% 49.47%, #444444 0%, #111111 100%);
+  background: radial-gradient(50% 50% at 50% 50%, #444444 0%, #111111 100%);
   background-repeat: no-repeat; 
   background-size: cover;
   font-family: 'Helvetica', sans-serif;
@@ -30,6 +29,12 @@ section:not(#top-bar) {
   overflow: hidden;
 }
 
+.background-img {
+  position: absolute;
+  z-index: -1;
+}
+
+/* ------------- Top Bar Section ------------- */
 #top-bar {
   height: 75px;
 }
@@ -184,11 +189,21 @@ a {
 }
 
 #add-to-cart:hover {
-  background-color: var(--text-color);
+  background-color: var(--hover-color);
+  border-color: #111111;
   color: black;
 }
 
 /* ------------ Features Section ------------- */
+#surround-sound-img {
+  width: 65%;
+  margin-top: -75px;
+}
+
+#features-start {
+  padding-top: 100px;
+}
+
 #title-container {
   display: flex;
   justify-content: center;
@@ -202,9 +217,9 @@ a {
   border-bottom: 2px solid var(--text-color);
 }
 
-.info-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.feature-container {
+  display: flex;
+  flex-direction: column;
   gap: 100px;
 }
 
@@ -214,21 +229,118 @@ a {
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  padding: 20px;
 }
 
 .info h3 {
-  font-size: 2rem;
-  padding: 25px 0;
+  font-size: 4rem;
+  padding-bottom: 20px;
 }
 
 .info p {
   font-size: 20px;
   word-spacing: 3px;
-  width: 85%;
+  width: 30%;
+}
+
+#beats-lebron-img {
+  margin-top: 400px;
+  width: 70%;
+}
+
+.feature-container-margin {
+  margin-bottom: 70vh;
+}
+
+.feature-small-container-margin {
+  margin-bottom: 48vh;
+}
+
+#wireless-header, #wireless-description {
+  transform: translate(-20vw, 18vh);
+}
+
+#wireless-description {
+  width: 30%;
+}
+
+#beats-battery-img {
+  width: 80%;
+  height: 80%;
+  transform: scaleX(-1);
+}
+
+#battery-life-header, #battery-life-description {
+  transform: translate(23vw, 5vh);
+  color: #222222;
+}
+
+#battery-life-description {
+  width: 30%;
+}
+
+#beats-comfort-img {
+  width: 70%;
+}
+
+#comfort-header, #comfort-description {
+  transform: translateX(-20vw);
+}
+
+#comfort-description {
+  width: 25%;
 }
 
 
+/* -------- How It Works Section ------- */
+.background-color-white {
+  background: var(--text-color);
+  color: #111111;
+}
+
+.how-it-works-container {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 40px;
+}
+
+#title-container {
+  padding: 0;
+  margin: 0;
+}
+
+.how-it-works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+}
+
+.how-it-works h3 {
+  font-size: 4rem;
+  padding-bottom: 20px;
+}
+
+.how-it-works p {
+  font-size: 20px;
+  width: 75%;
+}
+
+#controls-img {
+  position: absolute;
+  width: 80%;
+  transform: translateY(20vh);
+}
+
+#controls-description {
+  position: absolute;
+  font-size: 2rem;
+  color: var(--text-color);
+  width: 30%;
+  transform: translate(-20vw, 50vh);
+}
 
 /* ------------------------------------ Media ------------------------------------ */
 @media (max-width: 1600px) {
