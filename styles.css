@@ -26,6 +26,10 @@ section {
   width: 100vw;
 }
 
+section:not(#top-bar) {
+  overflow: hidden;
+}
+
 #top-bar {
   height: 75px;
 }
@@ -330,16 +334,11 @@ a {
 @media (max-width: 1000px) {
   #product {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 100vw;
   }
 
   .product-img {
     padding-top: 0;
-  }
-
-  #product-title {
-    word-spacing: 5px;
   }
 
   #title-slogan {
@@ -370,6 +369,16 @@ a {
 
   .hidden {
     display: flex;
+  }
+}
+
+@media (max-width: 625px) {
+  .product-img {
+    transform: scale(0.9);
+  }
+  
+  #product-title {
+    transform: scale(0.6);
   }
 }
 
