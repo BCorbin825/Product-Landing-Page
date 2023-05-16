@@ -19,6 +19,7 @@ body {
   font-weight: bold;
   color: var(--text-color);
   min-height: 100vh;
+  
 }
 
 section {
@@ -48,6 +49,7 @@ section:not(#top-bar) {
   position: fixed;
   background-color: rgba(17, 17, 17, 0.8);
   min-height: 75px;
+  width: 100vw;
   justify-content: space-between;
   align-items: center;
 }
@@ -195,6 +197,10 @@ a {
 }
 
 /* ------------ Features Section ------------- */
+#features {
+  margin-bottom: -75px;
+}
+
 #surround-sound-img {
   width: 65%;
   margin-top: -75px;
@@ -214,7 +220,6 @@ a {
   font-size: 6rem;
   margin-top: 60px;
   margin-bottom: 10px;
-  border-bottom: 2px solid var(--text-color);
 }
 
 .feature-container {
@@ -297,41 +302,46 @@ a {
   color: #111111;
 }
 
+#how-it-works {
+  height: 100vh;
+  margin-top: 75px;
+}
+
 .how-it-works-container {
   display: flex;
   justify-content: space-around;
   text-align: center;
-  width: 100vw;
-  height: 100vh;
   padding-top: 40px;
+}
+
+.how-it-works-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #title-container {
   padding: 0;
-  margin: 0;
+  margin-top: 20px;
 }
 
-.how-it-works {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 999;
-}
-
-.how-it-works h3 {
+.how-it-works-content h3 {
   font-size: 4rem;
-  padding-bottom: 20px;
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+  margin-top: -15px;
 }
 
-.how-it-works p {
+.how-it-works-content p {
   font-size: 20px;
   width: 75%;
+  padding-top: 10px;
 }
 
 #controls-img {
   position: absolute;
-  width: 80%;
-  transform: translateY(20vh);
+  width: 60%;
+  transform: translateY(18vh);
 }
 
 #controls-description {
@@ -339,7 +349,67 @@ a {
   font-size: 2rem;
   color: var(--text-color);
   width: 30%;
-  transform: translate(-20vw, 50vh);
+  transform: translate(-15vw, 41vh);
+}
+
+/* -------- Tech Specs --------  */
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.align {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.align h3 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--text-color);
+}
+
+.tech-specs-container {
+  padding-left: 10px;
+}
+
+.tech-specs-title-container {
+  margin-bottom: 50px;
+}
+
+.tech-specs-ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 30px 0;
+}
+
+.tech-specs-ul li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 20px 0 30px 0;
+}
+
+.connectivity-ul li h4, .battery-ul li h4 {
+  width: 50%;
+  text-align: center;
+}
+
+.connectivity-ul li p, .battery-ul li p {
+  width: 50%;
+  text-align: center;
+}
+
+.sound-ul li h4 {
+  width: 50%;
+ 
+}
+
+.sound-ul li p {
+  width: 50%;
 }
 
 /* ------------------------------------ Media ------------------------------------ */
