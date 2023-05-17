@@ -197,10 +197,6 @@ a {
 }
 
 /* ------------ Features Section ------------- */
-#features {
-  margin-bottom: -75px;
-}
-
 #surround-sound-img {
   width: 65%;
   margin-top: -75px;
@@ -295,7 +291,6 @@ a {
   width: 25%;
 }
 
-
 /* -------- How It Works Section ------- */
 .background-color-white {
   background: var(--text-color);
@@ -353,6 +348,11 @@ a {
 }
 
 /* -------- Tech Specs --------  */
+#tech-specs {
+  height: 100vh;
+  margin-top: 75px;
+}
+
 .info-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -367,10 +367,6 @@ a {
 .align h3 {
   font-size: 1.5rem;
   border-bottom: 2px solid var(--text-color);
-}
-
-.tech-specs-container {
-  padding-left: 10px;
 }
 
 .tech-specs-title-container {
@@ -393,24 +389,18 @@ a {
   padding: 20px 0 30px 0;
 }
 
-.connectivity-ul li h4, .battery-ul li h4 {
-  width: 50%;
-  text-align: center;
+.tech-specs-ul h4 {
+  width: 40%;
+  display: flex;
+  justify-content: fle;
 }
 
-.connectivity-ul li p, .battery-ul li p {
-  width: 50%;
-  text-align: center;
+.tech-specs-ul p {
+  width: 60%;
+  display: flex;
+  justify-content: center;
 }
 
-.sound-ul li h4 {
-  width: 50%;
- 
-}
-
-.sound-ul li p {
-  width: 50%;
-}
 
 /* ------------------------------------ Media ------------------------------------ */
 @media (max-width: 1600px) {
