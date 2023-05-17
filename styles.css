@@ -35,6 +35,10 @@ section:not(#top-bar) {
   z-index: -1;
 }
 
+.hidden {
+  display: none;
+}
+
 /* ------------- Top Bar Section ------------- */
 #top-bar {
   height: 75px;
@@ -124,10 +128,6 @@ a {
 .icon a i:hover {
   color: var(--hover-color);
   transform: translateY(-3px);
-}
-
-.hidden {
-  display: none;
 }
 
 /* ------------- Product Section ------------- */
