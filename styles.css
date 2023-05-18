@@ -19,7 +19,7 @@ body {
   font-weight: bold;
   color: var(--text-color);
   min-height: 100vh;
-  
+  max-width: 2560px;
 }
 
 section {
@@ -42,9 +42,7 @@ a {
 .title-container {
   display: flex;
   justify-content: center;
-  padding-left: 45px;
-  margin-bottom: 100px;
-  padding: 0;
+  margin-top: 80px;
 }
 
 .title-container h2 {
@@ -56,7 +54,7 @@ a {
 
 /* ------------- Top Bar Section ------------- */
 #top-bar {
-  height: 75px;
+  height: 5vh;
 }
 
 #top-bar * {
@@ -67,7 +65,7 @@ a {
   display: flex;
   position: fixed;
   background-color: rgba(17, 17, 17, 0.8);
-  min-height: 75px;
+  min-height: 6vh;
   width: 100vw;
   justify-content: space-between;
   align-items: center;
@@ -125,7 +123,7 @@ a {
 }
 
 .icon {
-  padding-right: 40px;
+  padding-right: 2.2vw;
   transform: scale(1.5);
 }
 
@@ -178,6 +176,7 @@ a {
 #slogan {
   padding-top: 5px;
   font-weight: 100;
+  font-size: 1.2rem;
 }
 
 #price {
@@ -212,7 +211,7 @@ a {
 }
 
 #features-start {
-  padding-top: 100px;
+  padding-top: 85px;
 }
 
 .feature-container {
@@ -230,12 +229,12 @@ a {
 }
 
 .info h3 {
-  font-size: 4rem;
+  font-size: 3.8rem;
   padding-bottom: 20px;
 }
 
 .info p {
-  font-size: 25px;
+  font-size: 1.5rem;
   word-spacing: 3px;
   width: 30%;
 }
@@ -310,7 +309,7 @@ a {
 #how-it-works {
   height: 100vh;
   margin-top: 75px;
-  padding-top: 100px;
+  padding-top: 80px;
 }
 
 #how-it-works-wrapper {
@@ -344,20 +343,28 @@ a {
   width: 75%;
   padding-top: 10px;
 }
+
+#controls-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #controls-img {
-  transform: translate(32.5%, 20%);
-  width: 60%;
+  width: 70%;
+  transform: translateY(10%);
 }
 
 #controls-description {
   position: absolute;
+  text-align: center;
   font-size: 2rem;
   color: var(--text-color);
   width: 30%;
-  transform: translate(-13vw, 50vh);
+  transform: translate(-55%, 58%);
 }
 
-/* -------- Tech Specs --------  */
+/* -------- Tech Specs Section --------  */
 #tech-specs {
   display: flex;
   flex-direction: column;
@@ -365,9 +372,14 @@ a {
   height: 100vh;
 }
 
+#tech-specs-container {
+  padding-top: 100px;
+}
+
 .info-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  margin: 40px;
 }
 
 .align {
@@ -377,8 +389,12 @@ a {
 }
 
 .align h3 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   border-bottom: 2px solid var(--text-color);
+}
+
+.tech-specs-ul:nth-child(-n + 3) {
+  margin-bottom: 70px;
 }
 
 .tech-specs-ul {
@@ -386,14 +402,14 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0 30px 0;
+  padding: 20px 10px 30px 10px;
 }
 
 .tech-specs-ul li {
   display: flex;
   align-items: center;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   padding: 20px 0 30px 0;
 }
 
@@ -405,9 +421,10 @@ a {
 
 .tech-specs-ul p {
   width: 60%;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 /* --------- Form --------- */
@@ -422,6 +439,7 @@ a {
 
 #form-title {
   color: #111111;
+  font-size: 2rem;
 }
 
 #form-title-container {
@@ -437,7 +455,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px;
+  width: 15.6vw;
   margin: 0 auto;
   padding-bottom: 2%;
 }
@@ -448,7 +466,7 @@ a {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 1.2rem;
   text-align: center;
 }
 
@@ -460,7 +478,7 @@ a {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 1.25rem;
 }
 
 #submit:hover {
@@ -471,7 +489,7 @@ a {
 .copyright {
   text-align: center;
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 0.8rem;
   color: #666;
   line-height: 1.4;
 }
@@ -481,6 +499,92 @@ a {
 }
 
 /* ------------------------------------ Media ------------------------------------ */
+@media (min-width: 2560px) {
+  #header-img {
+    width: 60px;
+  }
+
+  #logo h1 {
+    font-size: 2rem;
+  }
+
+  .nav-link {
+    font-size: 1.6rem;
+  }
+
+  .icon {
+    transform: scale(1.8);
+  }
+
+  .product-img {
+    transform: scale(1.7);
+  }
+
+  #product-title {
+    font-size: 7rem;
+  }
+
+  #slogan {
+    font-size: 1.4rem;
+  }
+
+  #add-to-cart {
+    font-size: 1.4rem;
+  }
+
+  #features-start {
+    padding-top: 120px;
+  }
+
+  .info h3 {
+    font-size: 5rem;
+  }
+  
+  .info p {
+    font-size: 1.8rem;
+  }
+
+  .how-it-works-content h3 {
+    font-size: 6rem;
+  }
+  
+  .how-it-works-content p {
+    font-size: 1.7rem;
+  }
+
+  #controls-description {
+    font-size: 2.8rem;
+  }
+
+  .align h3 {
+    font-size: 3.2rem;
+  }
+  
+  .tech-specs-ul li {
+    font-size: 2rem;
+  }
+  
+  .tech-specs-ul p {
+    font-size: 1.6rem;
+  }
+
+  #form-title {
+    font-size: 2.6rem;
+  }
+
+  #email {
+    font-size: 1.7rem;
+  }
+  
+  #submit {
+    font-size: 1.6rem;
+  }
+
+  .copyright {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 1600px) {
   #title-slogan {
     width: 30%;
