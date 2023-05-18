@@ -30,14 +30,24 @@ section:not(#top-bar) {
   overflow: hidden;
 }
 
-.background-img {
-  position: absolute;
-  z-index: -1;
-}
-
 .hidden {
   display: none;
 }
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  padding-left: 45px;
+  margin-bottom: 100px;
+  padding: 0;
+}
+
+.title-container h2 {
+  font-size: 6rem;
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+
 
 /* ------------- Top Bar Section ------------- */
 #top-bar {
@@ -206,22 +216,10 @@ a {
   padding-top: 100px;
 }
 
-#title-container {
-  display: flex;
-  justify-content: center;
-  padding-left: 45px;
-}
-
-#title-container h2 {
-  font-size: 6rem;
-  margin-top: 60px;
-  margin-bottom: 10px;
-}
-
 .feature-container {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 50px;
 }
 
 .info {
@@ -238,29 +236,26 @@ a {
 }
 
 .info p {
-  font-size: 20px;
+  font-size: 25px;
   word-spacing: 3px;
   width: 30%;
 }
 
 #beats-lebron-img {
-  margin-top: 400px;
   width: 70%;
 }
 
-.feature-container-margin {
-  margin-bottom: 70vh;
-}
-
-.feature-small-container-margin {
-  margin-bottom: 48vh;
-}
-
 #wireless-header, #wireless-description {
-  transform: translate(-20vw, 18vh);
+  position: absolute;
+  z-index: 1;
+}
+
+#wireless-header {
+  transform: translate(-18.5vw, -50%);
 }
 
 #wireless-description {
+  transform: translate(-18.5vw, 50%);
   width: 30%;
 }
 
@@ -271,12 +266,18 @@ a {
 }
 
 #battery-life-header, #battery-life-description {
-  transform: translate(23vw, 5vh);
+  position: absolute;
+  z-index: 1;
   color: #222222;
+}
+
+#battery-life-header {
+  transform: translate(22.5vw, -90%);
 }
 
 #battery-life-description {
   width: 30%;
+  transform: translate(75%, 25%);
 }
 
 #beats-comfort-img {
@@ -284,11 +285,21 @@ a {
 }
 
 #comfort-header, #comfort-description {
-  transform: translateX(-20vw);
+  position: absolute;
+}
+
+#comfort-header {
+  transform: translate(-19.8vw, -60%);
 }
 
 #comfort-description {
   width: 25%;
+  transform: translate(-80%, 45%);
+}
+
+#video {
+  width: 70vw;
+  border: 1px solid var(--text-color);
 }
 
 /* -------- How It Works Section ------- */
@@ -300,6 +311,7 @@ a {
 #how-it-works {
   height: 100vh;
   margin-top: 75px;
+  padding-top: 100px;
 }
 
 .how-it-works-container {
@@ -313,11 +325,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-#title-container {
-  padding: 0;
-  margin-top: 20px;
 }
 
 .how-it-works-content h3 {
@@ -349,8 +356,10 @@ a {
 
 /* -------- Tech Specs --------  */
 #tech-specs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100vh;
-  margin-top: 75px;
 }
 
 .info-container {
@@ -365,12 +374,8 @@ a {
 }
 
 .align h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   border-bottom: 2px solid var(--text-color);
-}
-
-.tech-specs-title-container {
-  margin-bottom: 50px;
 }
 
 .tech-specs-ul {
@@ -392,15 +397,85 @@ a {
 .tech-specs-ul h4 {
   width: 40%;
   display: flex;
-  justify-content: fle;
+  justify-content: flex-start;
 }
 
 .tech-specs-ul p {
   width: 60%;
+  font-size: 1.2rem;
   display: flex;
   justify-content: center;
 }
 
+/* --------- Form --------- */
+#form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 25vh;
+  background-color: var(--text-color);
+}
+
+#form-title {
+  color: #111111;
+}
+
+#form-title-container {
+  display: flex;
+  justify-content: center;
+  padding-left: 45px;
+  margin-bottom: 20px;
+  padding: 0;
+  margin-top: 30px;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2%;
+}
+
+#email {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+}
+
+#submit {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#submit:hover {
+  background-color: #45a049;
+}
+
+/* ----- Copyright ----- */
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.copyright p {
+  margin-bottom: 10px;
+}
 
 /* ------------------------------------ Media ------------------------------------ */
 @media (max-width: 1600px) {

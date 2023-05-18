@@ -18,9 +18,9 @@
         </div>
         <nav id="nav-bar">
           <ul id="nav-list">
-            <li class="nav-link"><a href="#features">Features</a></li>
-            <li class="nav-link"><a href="#how-it-works">How It Works</a></li>
-            <li class="nav-link"><a href="#tech-specs">Tech Specs</a></li>
+            <li><a class="nav-link" href="#features">Features</a></li>
+            <li><a class="nav-link" href="#how-it-works">How It Works</a></li>
+            <li><a class="nav-link" href="#tech-specs">Tech Specs</a></li>
           </ul>
         </nav>
         <div class="icon-wrapper">
@@ -53,36 +53,39 @@
           <p class="feature-description">Enjoy rich, high-quality audio with AeroBeats headphones. Immerse yourself in your favorite music like never before.</p>
           <img id="surround-sound-img" src="Images/Beats-Surround-Sound.png" alt="Sound Experience">
         </div>
-        <div class="info feature-container-margin">
-          <h3 class="feature-header" id="wireless-header">Wireless Freedom</h3>
+        <div class="info">
+          <h3 id="wireless-header">Wireless Freedom</h3>
           <p class="feature-description" id="wireless-description">Say goodbye to tangled wires and experience true freedom. AeroBeats headphones offer seamless wireless connectivity for hassle-free listening.</p>
-          <img class="background-img" id="beats-lebron-img" src="Images/Beats-Lebron.png" alt="Wireless Experience">
+          <img id="beats-lebron-img" src="Images/Beats-Lebron.png" alt="Wireless Experience">
         </div>
-        <div class="info feature-small-container-margin">
+        <div class="info">
           <h3 id="battery-life-header">All-Day Battery Life</h3>
           <p class="feature-description" id="battery-life-description">Experience uninterrupted music with our AeroBeats' impressive 40-hour battery life. Stay connected and immersed in your audio world from morning to night, enjoying your favorite tracks without worrying about recharging.</p>
-          <img class="background-img" id="beats-battery-img" src="Images/Battery-Life.jpg" alt="Battery Life">
+          <img id="beats-battery-img" src="Images/Battery-Life.jpg" alt="Battery Life">
         </div>
-        <div class="info feature-small-container-margin">
+        <div class="info">
           <h3 id="comfort-header">All-Day Comfort</h3>
           <p class="feature-description" id="comfort-description">Designed for extended wear, AeroBeats headphones provide exceptional comfort so you can enjoy your music for hours.</p>
-          <img class="background-img" id="beats-comfort-img" src="Images/Beats-comfort.jpg" alt="Comfort Experience">
+          <img id="beats-comfort-img" src="Images/Beats-comfort.jpg" alt="Comfort Experience">
+        </div>
+        <div class="info">
+          <video id="video" src="https://www.youtube.com/watch?v=Q0B72t-M4CA" controls></video>
         </div>
       </div>
     </section>
     
     <!-------- How It Works -------->
     <section class="background-color-white" id="how-it-works">
-      <div id="title-container">
+      <!-- <div class="title-container">
         <h2>How It Works</h2>
-      </div>
+      </div> -->
       <div class="how-it-works-container">
         <div class="how-it-works-content">
           <h3>Turn On</h3>
           <p>Simply press and hold the side button to turn on your AeroBeats headphones.</p>
         </div>
         <div class="how-it-works-content">
-          <h3>Pairing</h3>
+          <h3>Pair</h3>
           <p>Pair your headphones with your device using Bluetooth for a seamless connection.</p>
         </div>
         <div class="how-it-works-content">
@@ -96,7 +99,7 @@
 
     <!-------- Tech Specs -------->
     <section id="tech-specs">
-      <div class="tech-specs-title-container" id="title-container">
+      <div class="title-container">
         <h2>Tech Specs</h2>
       </div>
       <div class="info-container tech-specs-container">
@@ -204,5 +207,22 @@
         </div>
       </div>
     </section>
+
+    <!--------- Form --------->
+    <section id="form-section">
+      <div id="form-title-container">
+        <h2 id="form-title">Enter your email to keep up with the latest AeroBeats news</h2>
+      </div>
+      <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        <input type="submit" id="submit" value="Submit">
+      </form>
+    </section>
+
+    <!----- Copyright ----->
+    <div class="copyright">
+      <p>&copy; 2023 AeroBeats. All rights reserved.</p>
+      <p>This website is for educational purposes only and does not represent or endorse any brand or product, including Beats headphones. The images used are for illustrative purposes only.</p>
+    </div>    
   </body>
 </html>
