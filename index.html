@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/shopping-cart.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <!-------- Top bar -------->
@@ -48,27 +49,27 @@
     <!-------- Features -------->
     <section id="features">
       <div class="feature-container">
-        <div class="info">
+        <div class="info" data-aos="zoom-in" data-aos-duration="1500">
           <h3 id="features-start">Immersive Sound Experience</h3>
           <p class="feature-description">Enjoy rich, high-quality audio with AeroBeats headphones. Immerse yourself in your favorite music like never before.</p>
           <img id="surround-sound-img" src="Images/Beats-Surround-Sound.png" alt="Sound Experience">
         </div>
-        <div class="info">
+        <div class="info" data-aos="fade-right" data-aos-duration="1500">
           <h3 id="wireless-header">Wireless Freedom</h3>
           <p class="feature-description" id="wireless-description">Say goodbye to tangled wires and experience true freedom. AeroBeats headphones offer seamless wireless connectivity for hassle-free listening.</p>
           <img id="beats-lebron-img" src="Images/Beats-Lebron.png" alt="Wireless Experience">
         </div>
-        <div class="info">
+        <div class="info" data-aos="fade-left" data-aos-duration="1500">
           <h3 id="battery-life-header">All-Day Battery Life</h3>
           <p class="feature-description" id="battery-life-description">Experience uninterrupted music with our AeroBeats' impressive 40-hour battery life. Stay connected and immersed in your audio world from morning to night, enjoying your favorite tracks without worrying about recharging.</p>
           <img id="beats-battery-img" src="Images/Battery-Life.jpg" alt="Battery Life">
         </div>
-        <div class="info">
+        <div class="info" data-aos="fade-right" data-aos-duration="1500">
           <h3 id="comfort-header">All-Day Comfort</h3>
           <p class="feature-description" id="comfort-description">Designed for extended wear, AeroBeats headphones provide exceptional comfort so you can enjoy your music for hours.</p>
           <img id="beats-comfort-img" src="Images/Beats-comfort.jpg" alt="Comfort Experience">
         </div>
-        <div class="info">
+        <div class="info" data-aos="zoom-out" data-aos-duration="1500">
           <video id="video" src="https://www.youtube.com/watch?v=Q0B72t-M4CA" controls></video>
         </div>
       </div>
@@ -76,20 +77,24 @@
     
     <!-------- How It Works -------->
     <section class="background-color-white" id="how-it-works">
-      <div class="how-it-works-container">
-        <div class="how-it-works-content">
-          <h3>Turn On</h3>
-          <p>Simply press and hold the side button to turn on your AeroBeats headphones.</p>
+      <div id="how-it-works-wrapper">
+        <div class="how-it-works-container">
+          <div class="how-it-works-content">
+            <h3>Turn On</h3>
+            <p>Simply press and hold the side button to turn on your AeroBeats headphones.</p>
+          </div>
+          <div class="how-it-works-content">
+            <h3>Pair</h3>
+            <p>Pair your headphones with your device using Bluetooth for a seamless connection.</p>
+          </div>
+          <div class="how-it-works-content">
+            <h3>Enjoy</h3>
+            <p>Once connected, enjoy high-quality wireless audio with AeroBeats headphones.</p>
+          </div>
         </div>
-        <div class="how-it-works-content">
-          <h3>Pair</h3>
-          <p>Pair your headphones with your device using Bluetooth for a seamless connection.</p>
+        <div id="controls-img-container" data-aos="flip-left" data-aos-duration="1500">
+          <img id="controls-img" src="Images/Audio-Controls.jpg" alt="Beats Controls">
         </div>
-        <div class="how-it-works-content">
-          <h3>Enjoy</h3>
-          <p>Once connected, enjoy high-quality wireless audio with AeroBeats headphones.</p>
-        </div>
-        <img id="controls-img" src="Images/Audio-Controls.jpg" alt="Beats Controls">
         <p id="controls-description">With AeroBeats you only need 3 simple controls to take charge of your listening experience</p>
       </div>
     </section>
@@ -220,6 +225,11 @@
     <div class="copyright">
       <p>&copy; 2023 AeroBeats. All rights reserved.</p>
       <p>This website is for educational purposes only and does not represent or endorse any brand or product, including Beats headphones. The images used are for illustrative purposes only.</p>
-    </div>    
+    </div> 
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
