@@ -35,8 +35,18 @@ a {
   color: var(--text-color);
 }
 
+button {
+  background: none;
+  border: none;
+  color: inherit;
+}
+
 .hidden {
   display: none;
+}
+
+.float {
+  animation: float 2.5s ease-in-out infinite;
 }
 
 .title-container {
@@ -151,26 +161,15 @@ a {
   transform: scale(1.5);
 }
 
-#gold {
-  animation: float 2.5s ease-in-out infinite;
-}
-
-#black {
-  display: none;
-}
-
-#white {
-  display: none;
-}
-
-#title-slogan {
+#product-content {
   width: 25%;
-  transform: translateY(-5vh);
+  transform: translateY(-3vh);
 }
 
 #product-title {
   font-weight: 900;
   font-size: 6rem;
+  line-height: 1.2;
 }
 
 #slogan {
@@ -181,14 +180,13 @@ a {
 
 #price {
   font-size: 4rem;
-  padding-top: 90px;
-  padding-bottom: 50px;
+  padding-top: 60px;
+  padding-bottom: 40px;
 }
 
 #add-to-cart {
   font-weight: 700;
   font-size: 1rem;
-  margin-left: 5px;
   padding: 15px 60px;
   border: 2px solid var(--text-color);
   border-radius: 4px;
@@ -202,6 +200,17 @@ a {
   background-color: var(--hover-color);
   border-color: #111111;
   color: black;
+}
+
+#color-img-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 60px;
+}
+
+.color-img {
+  transform: scale(1);
+  margin-right: 40px ;
 }
 
 /* ------------ Features Section ------------- */
@@ -390,7 +399,8 @@ a {
 
 .align h3 {
   font-size: 2.5rem;
-  border-bottom: 2px solid var(--text-color);
+  border-bottom: 4px solid var(--text-color);
+  border-radius: 10px;
 }
 
 .tech-specs-ul:nth-child(-n + 3) {
@@ -471,7 +481,7 @@ a {
 }
 
 #submit {
-  width: 100%;
+  width: 80%;
   padding: 10px;
   background-color: #4CAF50;
   color: white;

@@ -34,15 +34,26 @@
     <!-------- Product -------->
     <section id="product">
       <div class="product-img">
-        <img id="gold" src="Images/Headphones-Gold.png" alt="Product Image Gold" />
-        <img id="black" src="Images/Headphones-Black.png" alt="Product Image Black" />
-        <img id="white" src="Images/Headphones-White.png" alt="Product Image White" />
+        <img class="float" id="gold" src="Images/Headphones-Gold.png" alt="Product Image Gold" />
+        <img class="float hidden" id="black" src="Images/Headphones-Black.png" alt="Product Image Black" />
+        <img class="float hidden" id="white" src="Images/Headphones-White.png" alt="Product Image White" />
       </div>
-      <div id="title-slogan">
+      <div id="product-content">
         <h1 id="product-title">Wireless Headphones</h1>
         <p id="slogan">Unleash Your Sound with AeroBeats</p>
         <h2 id="price">$149.99</h2>
         <button id="add-to-cart">Add To Cart</button>
+        <div id="color-img-container">
+          <button id="gold-button">
+            <img class="color-img" src="Images/Headphones-Gold-Icon.png" alt="Gold Headphones">
+          </button>
+          <button id="black-button">
+            <img class="color-img" src="Images/Headphones-Black-Icon.png" alt="Black Headphones">
+          </button>
+          <button id="white-button">
+            <img class="color-img" src="Images/Headphones-White-Icon.png" alt="White Headphones">
+          </button>
+        </div>
       </div>
     </section>
 
@@ -101,7 +112,7 @@
 
     <!-------- Tech Specs -------->
     <section id="tech-specs">
-      <div class="info-container" id="tech-specs-container">
+      <div class="info-container" id="tech-specs-container" data-aos="fade-down" data-aos-duration="1500">
         <div class="align" id="connectivity-content">
           <h3>Connectivity</h3>
           <ul class="tech-specs-ul connectivity-ul">
@@ -119,7 +130,7 @@
             </li>
           </ul>
         </div>
-        <div class="align" id="sound-content">
+        <div class="align" id="sound-content" data-aos="fade-down" data-aos-duration="1500">
           <h3>Sound Quality</h3>
           <ul class="tech-specs-ul sound-ul">
             <li>
@@ -136,7 +147,7 @@
             </li>
           </ul>
         </div>
-        <div class="align" id="battery-content">
+        <div class="align" id="battery-content" data-aos="fade-down" data-aos-duration="1500">
           <h3>Battery</h3>
           <ul class="tech-specs-ul battery-ul">
             <li>
@@ -153,7 +164,7 @@
             </li>
           </ul>
         </div>
-        <div class="align" id="controls-content">
+        <div class="align" id="controls-content" data-aos="fade-up" data-aos-duration="2000">
           <h3>Controls and Features</h3>
           <ul class="tech-specs-ul controls-ul">
             <li>
@@ -170,7 +181,7 @@
             </li>
           </ul>
         </div>
-        <div class="align" id="design-content">
+        <div class="align" id="design-content" data-aos="fade-up" data-aos-duration="2000">
           <h3>Design and Comfort</h3>
           <ul class="tech-specs-ul design-ul">
             <li>
@@ -187,7 +198,7 @@
             </li>
           </ul>
         </div>
-        <div class="align" id="additional-content">
+        <div class="align" id="additional-content" data-aos="fade-up" data-aos-duration="2000">
           <h3>Additional Features</h3>
           <ul class="tech-specs-ul additional-ul">
             <li>
@@ -225,6 +236,7 @@
       <p>The images used are for illustrative purposes only.</p>
     </div> 
     
+    <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
