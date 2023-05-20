@@ -1029,7 +1029,7 @@ button {
   }
 
   .product-img {
-    transform: scale(0.9) translateY(12vh);
+    transform: scale(0.9) translateY(8vh);
     padding: 0;
   }
 
@@ -1038,6 +1038,20 @@ button {
     width: 100%;
     text-align: center;
     transform: scale(0.7) translateY(-6vh);
+  }
+
+  #slogan {
+    padding-top: 10px;
+    font-size: 22px;
+  }
+
+  #price {
+    padding-top: 20px;
+  }
+
+  #add-to-cart {
+    font-size: 1.5rem;
+    border-radius: 6px;
   }
 
   #color-img-container {
