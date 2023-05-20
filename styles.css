@@ -60,10 +60,6 @@ button {
   display: none;
 }
 
-.float {
-  animation: float 2.5s ease-in-out infinite;
-}
-
 .title-container {
   display: flex;
   justify-content: center;
@@ -76,6 +72,13 @@ button {
   margin-bottom: 10px;
 }
 
+.float {
+  animation: float 2.5s ease-in-out infinite;
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
+}
 
 /* ------------- Top Bar Section ------------- */
 #top-bar {
@@ -147,17 +150,18 @@ button {
   transform: scale(1.5);
 }
 
-.icon a i {
+.icon i {
   color: var(--text-color);
   transition: 0.2s;
 }
 
-.icon a i:hover {
+.icon i:hover {
   transform: translateY(-3px);
 }
 
-#shopping-cart {
-  padding-bottom: 3px;
+#menu-icon {
+  margin-bottom: 2px;
+  transition: 0.4s;
 }
 
 /* ------------- Product Section ------------- */
@@ -448,12 +452,12 @@ button {
   display: flex;
   align-items: center;
   width: 100%;
-  font-size: 1.6rem;
   padding: 20px 0 30px 0;
 }
 
 .tech-specs-ul h4 {
   width: 40%;
+  font-size: 1.6rem;
   display: flex;
   justify-content: flex-start;
 }
@@ -646,10 +650,6 @@ button {
     font-size: 1.4rem;
   }
 
-  #tech-specs-container {
-    padding-top: 150px;
-  }
-
   .how-it-works-content h3 {
     font-size: 4.5rem;
   }
@@ -657,6 +657,22 @@ button {
   .how-it-works-content p {
     font-size: 1.35rem;
     width: 80%;
+  }
+
+  #tech-specs-container {
+    padding-top: 150px;
+  }
+
+  .align h3 {
+    font-size: 2.3rem;
+  }
+
+  .tech-specs-ul h4 {
+    font-size: 1.5rem;
+  }
+  
+  .tech-specs-ul p {
+    font-size: 1.3rem;
   }
 }
 
@@ -782,6 +798,10 @@ button {
     width: 35%;
   }
 
+  #surround-sound-description {
+    margin-bottom: 40px;
+  }
+
   .how-it-works-content h3 {
     font-size: 4.1rem;
   }
@@ -804,6 +824,18 @@ button {
 @media (max-width: 1360px) {
   #product-content {
     margin-right: 13vw;
+  }
+
+  #controls-description {
+    font-size: 1.65rem;
+  }
+
+  .tech-specs-ul h4 {
+    font-size: 1.3rem;
+  }
+
+  .tech-specs-ul p {
+    font-size: 1.1rem;
   }
 }
 
@@ -833,7 +865,25 @@ button {
   }
 
   #controls-description {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
+  }
+
+  #email {
+    font-size: 1.05rem;
+  }
+
+  .align h3 {
+    font-size: 2.1;
+  }
+}
+
+@media (max-width: 1250px) {
+  .align h3 {
+    font-size: 2rem;
+  }
+
+  .tech-specs-ul p {
+    font-size: 1rem;
   }
 }
 
@@ -867,6 +917,28 @@ button {
   #wireless-description, #battery-life-description, #comfort-description {
     width: 100%;
   }
+
+  .tech-specs-ul li h4 {
+    font-size: 1.2rem;
+  }
+
+  #email {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1150px) {
+  .how-it-works-content h3 {
+    font-size: 3.5rem;
+  }
+
+  .how-it-works-content p {
+    font-size: 1.2rem;
+  }
+
+  #email {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -891,8 +963,8 @@ button {
     transform: scale(0.77);
   }
 
-  #wireless-description, #battery-life-description {
-    width: 40%;
+  #battery-life-description {
+    padding-top: 25px;
   }
 
   .how-it-works-content h3 {
@@ -906,9 +978,16 @@ button {
   #controls-description {
     font-size: 1.55rem;
   }
+
+  .align h3 {
+    font-size: 1.8rem;
+  }
+  .tech-specs-ul li h4 {
+    font-size: 1.15rem;
+  }
 }
 
-@media (max-width: 1052px) {
+@media (max-width: 1050px) {
   .product-img {
     transform: scale(1.05);
     padding-right: 1.5vw;
@@ -918,6 +997,25 @@ button {
     margin-right: 10vw;
     transform: scale(0.65);
     width: 33%;
+  }
+
+  .align h3 {
+    font-size: 1.75rem;
+  }
+  .tech-specs-ul li h4 {
+    font-size: 1.1rem;
+  }
+
+  .tech-specs-ul li p {
+    font-size: 0.95rem;
+  }
+
+  #email {
+    font-size: 0.8rem;
+  }
+
+  #submit {
+    font-size: 1.1rem;
   }
 }
 
@@ -970,8 +1068,8 @@ button {
     transform: scale(0.7);
   }
 
-  #wireless-description, #battery-life-description, #comfort-description {
-    width: 45%;
+  #comfort-description {
+    padding-top: 30px;
   }
 
   .how-it-works-content h3 {
@@ -984,6 +1082,35 @@ button {
 
   #controls-description {
     font-size: 1.45rem;
+  }
+
+  .info-container {
+    grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
+  }
+
+  #tech-specs-container {
+    padding-top: 75px;
+  }
+
+  .align h3 {
+    font-size: 1.8rem;
+  }
+
+  .tech-specs-ul li h4 {
+    font-size: 1.2rem;
+  }
+
+  .tech-specs-ul li p {
+    font-size: 1.1rem;
+  }
+
+  .tech-specs-ul:nth-child(-n + 4) {
+    margin-bottom: 5px;
+  }
+
+  .tech-specs-ul li {
+    padding: 10px 0 20px 0;
   }
 }
 

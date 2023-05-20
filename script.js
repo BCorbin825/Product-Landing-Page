@@ -1,5 +1,8 @@
 const navigationElements = document.querySelectorAll('#nav-list li');
 
+const menu_button = document.getElementById("menu-button");
+const menu_icon = document.getElementById("menu-icon");
+
 const overview_nav = document.getElementById("overview-nav");
 const features_nav = document.getElementById("features-nav");
 const how_it_works_nav = document.getElementById("how-it-works-nav");
@@ -47,15 +50,19 @@ window.addEventListener('scroll', () => {
 });
 
 window.addEventListener('resize', function() {
-  const menu_icon = document.getElementById("menu-icon");
+  const menu_icon_container = document.getElementById("menu-icon-container");
   var screenWidth = window.innerWidth;
 
   if (screenWidth <= 1000) {
-    menu_icon.classList.remove("hidden");
+    menu_icon_container.classList.remove("hidden");
   }
   else if (screenWidth > 1000) {
-    menu_icon.classList.add("hidden");
+    menu_icon_container.classList.add("hidden");
   }
+});
+
+menu_button.addEventListener("click", function() {
+  menu_icon.classList.toggle("rotate90");
 });
 
 gold_btn.addEventListener("click", function() {
