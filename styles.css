@@ -19,6 +19,7 @@ body {
   color: var(--text-color);
   min-height: 100vh;
   max-width: 2560px;
+  overflow-x: hidden;
 }
 
 section {
@@ -1291,8 +1292,13 @@ button {
 }
 
 @media (max-width: 325px) {
+  #logo h1 {
+    font-size: 1.2rem;
+    transform: translateX(-2vw);
+  }
+
   .icon-wrapper {
-    transform: translateX(-10vw);
+    transform: translateX(-4vw);
   }
 
   #battery-life-header {
