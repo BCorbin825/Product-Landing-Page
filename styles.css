@@ -79,6 +79,10 @@ button {
   transform: rotate(90deg);
 }
 
+#spacer {
+  display: none;
+}
+
 /* ------------- Top Bar Section ------------- */
 #top-bar {
   height: 5vh;
@@ -178,10 +182,13 @@ button {
   align-items: center;
 }
 
-.product-img {
-  display: flex;
+.product-img-container {
   padding-right: 10vw;
   transform: scale(1.5);
+}
+
+.product-img {
+
 }
 
 #product-content {
@@ -301,7 +308,6 @@ button {
 
 #beats-battery-img {
   width: 80%;
-  height: 80%;
   transform: scaleX(-1);
 }
 
@@ -559,7 +565,7 @@ button {
     transform: scale(1.8);
   }
 
-  .product-img {
+  .product-img-container {
     transform: scale(1.7);
   }
 
@@ -677,7 +683,7 @@ button {
 }
 
 @media (max-width: 1600px) {
-  .product-img {
+  .product-img-container {
     transform: scale(1.35);
   }
 
@@ -772,7 +778,7 @@ button {
 }
 
 @media (max-width: 1430px) {
-  .product-img {
+  .product-img-container {
     transform: scale(1.3);
   }
 
@@ -840,7 +846,7 @@ button {
 }
 
 @media (max-width: 1300px) {
-  .product-img {
+  .product-img-container {
     transform: scale(1.25);
   }
 
@@ -893,7 +899,7 @@ button {
     margin: 0 20px 0 20px;
   }
 
-  .product-img {
+  .product-img-container {
     transform: scale(1.15);
     padding-right: 2vw;
   }
@@ -946,7 +952,7 @@ button {
     margin: 0 15px 0 15px;
   }
 
-  .product-img {
+  .product-img-container {
     transform: scale(1.1);
     padding-right: 1.5vw;
   }
@@ -988,7 +994,7 @@ button {
 }
 
 @media (max-width: 1050px) {
-  .product-img {
+  .product-img-container {
     transform: scale(1.05);
     padding-right: 1.5vw;
   }
@@ -1028,7 +1034,7 @@ button {
     flex-direction: column;
   }
 
-  .product-img {
+  .product-img-container {
     transform: scale(0.9) translateY(8vh);
     padding: 0;
   }
@@ -1270,7 +1276,7 @@ button {
     margin-top: 0;
   }
 
-  .product-img {
+  .product-img-container {
     transform: scale(0.8) translateY(12vh);
   }
 
@@ -1297,7 +1303,7 @@ button {
     padding-right: 5.5vw;
   }
 
-  .product-img {
+  .product-img-container {
     transform: scale(0.7) translateY(12vh);
   }
 
@@ -1408,7 +1414,7 @@ button {
     padding-right: 7vw;
   }
 
-  .product-img {
+  .product-img-container {
     transform: scale(0.65) translateY(2vh);
   }
 
@@ -1456,6 +1462,15 @@ button {
 
   #controls-description {
     font-size: 0.4rem;
+  }
+}
+
+@media (max-height: 1079px) {
+  #product, #features, 
+  #features-start, #how-it-works, 
+  #tech-specs, #form-section, 
+  #copyright {
+    height: fit-content;
   }
 }
 
