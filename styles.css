@@ -180,6 +180,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateX(-3vw);
 }
 
 .product-img-container {
@@ -243,9 +244,9 @@ button {
 
 /* ------------ Features Section ------------- */
 
-#features-start {
+/* #features-start {
   height: 100vh;
-}
+} */
 
 .info {
   display: flex;
@@ -278,11 +279,7 @@ button {
 
 #surround-sound-img {
   width: 65%;
-  margin-top: -75px;
-}
-
-#surround-sound-header {
-  padding-top: 85px;
+  margin-top: 50px;
 }
 
 .feature-container {
@@ -332,9 +329,9 @@ button {
 }
 
 #how-it-works {
-  height: 100vh;
+  height: auto;
   margin-top: 75px;
-  padding-top: 80px;
+  padding: 5vmin 0 13vmin 0;
 }
 
 #how-it-works-wrapper {
@@ -347,7 +344,7 @@ button {
   display: flex;
   justify-content: space-around;
   text-align: center;
-  padding-top: 40px;
+  padding: 4vmin 0 8vmin 0;
 }
 
 .how-it-works-content {
@@ -357,14 +354,14 @@ button {
 }
 
 .how-it-works-content h3 {
-  font-size: 5rem;
+  font-size: 4.5vw;
   border-bottom: 2px solid black;
   padding-bottom: 10px;
   margin-top: -15px;
 }
 
 .how-it-works-content p {
-  font-size: 1.4rem;
+  font-size: 1.7vw;
   width: 75%;
   padding-top: 10px;
 }
@@ -377,16 +374,20 @@ button {
 
 #controls-img {
   width: 70%;
-  transform: translateY(10%);
+}
+
+#controls-description-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  transform: translateX(-55%);
 }
 
 #controls-description {
-  position: absolute;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.95vw;
   color: var(--text-color);
-  width: 30%;
-  transform: translate(-55%, 58%);
 }
 
 /* -------- Tech Specs Section --------  */
@@ -525,7 +526,7 @@ button {
 }
 
 /* ------------------------------------ Media ------------------------------------ */
-@media (min-width: 1921px) {
+/* @media (min-width: 1921px) {
   #header-img {
     width: 60px;
   }
@@ -601,7 +602,7 @@ button {
   .copyright {
     font-size: 1rem;
   }
-}
+} */
 
 @media (max-width: 1800px) {
   #wireless-header, #battery-life-header, #comfort-header {
@@ -610,14 +611,14 @@ button {
 }
 
 @media (max-width: 1700px) {
-  .how-it-works-content h3 {
+  /* .how-it-works-content h3 {
     font-size: 4.5rem;
   }
   
   .how-it-works-content p {
     font-size: 1.35rem;
     width: 80%;
-  }
+  } */
 
   #tech-specs-container {
     padding-top: 150px;
@@ -646,18 +647,18 @@ button {
     transform: scale(0.95);
   }
 
-  .how-it-works-content h3 {
+  /* .how-it-works-content h3 {
     font-size: 4.3rem;
   }
   
   .how-it-works-content p {
     font-size: 1.35rem;
     width: 85%;
-  }
+  } */
 
-  #controls-description {
+  /* #controls-description {
     font-size: 1.9rem;
-  }
+  } */
 }
 
 @media (max-width: 1550px) {
@@ -692,19 +693,19 @@ button {
     font-size: 1.3rem;
   }
 
-  .how-it-works-content h3 {
+  /* .how-it-works-content h3 {
     font-size: 4.3rem;
   }
   
   .how-it-works-content p {
     font-size: 1.35rem;
     width: 90%;
-  }
+  } */
 
-  #controls-description {
+  /* #controls-description {
     font-size: 2rem;
     width: 35%;
-  }
+  } */
 }
 
 @media (max-width: 1430px) {
@@ -718,27 +719,20 @@ button {
 }
 
 @media (max-width: 1400px) {
-  .how-it-works-content h3 {
+  /* .how-it-works-content h3 {
     font-size: 4rem;
   }
   
   .how-it-works-content p {
     width: 85%;
-  }
-
-  .how-it-works-content h3 {
-    font-size: 4.1rem;
-  }
-  
-  .how-it-works-content p {
     font-size: 1.3rem;
-  }
+  } */
 
-  #controls-description {
+  /* #controls-description {
     width: 40%;
     font-size: 1.8rem;
     transform: translate(-50%, 58%);
-  }
+  } */
 
   #email {
     font-size: 1.1rem;
@@ -750,9 +744,17 @@ button {
     margin-right: 13vw;
   }
 
-  #controls-description {
-    font-size: 1.65rem;
+  #surround-sound-header {
+    padding-bottom: 15px;
   }
+
+  #surround-sound-description {
+    padding-bottom: 20px;
+  }
+
+  /* #controls-description {
+    font-size: 1.65rem;
+  } */
 
   .tech-specs-ul h4 {
     font-size: 1.3rem;
@@ -777,17 +779,17 @@ button {
     transform: scale(0.8);
   }
 
-  .how-it-works-content h3 {
+  /* .how-it-works-content h3 {
     font-size: 4rem;
   }
   
   .how-it-works-content p {
     font-size: 1.3rem;
-  }
+  } */
 
-  #controls-description {
+  /* #controls-description {
     font-size: 1.6rem;
-  }
+  } */
 
   #email {
     font-size: 1.05rem;
@@ -857,13 +859,21 @@ button {
     width: 110%;
   }
 
-  .how-it-works-content h3 {
+  #surround-sound-header {
+    padding-bottom: 12px;
+  }
+
+  #surround-sound-description {
+    padding-bottom: 30px;
+  }
+
+  /* .how-it-works-content h3 {
     font-size: 3.5rem;
   }
 
   .how-it-works-content p {
     font-size: 1.2rem;
-  }
+  } */
 
   #email {
     font-size: 0.9rem;
@@ -880,17 +890,17 @@ button {
     transform: scale(0.7);
   }
 
-  .how-it-works-content h3 {
+  /* .how-it-works-content h3 {
     font-size: 3.8rem;
   }
   
   .how-it-works-content p {
     font-size: 1.2rem;
-  }
+  } */
 
-  #controls-description {
+  /* #controls-description {
     font-size: 1.55rem;
-  }
+  } */
 
   .align h3 {
     font-size: 1.8rem;
@@ -949,10 +959,6 @@ button {
     padding: 0;
   }
 
-  #slogan {
-    width: 100%;
-  }
-
   #product-content {
     margin: 0;
     width: 100%;
@@ -961,8 +967,9 @@ button {
   }
 
   #slogan {
+    width: 100%;
     padding-top: 10px;
-    font-size: 22px;
+    font-size: 1.4rem;
   }
 
   #price {
@@ -991,17 +998,25 @@ button {
     padding-right: 4vw;
   }
 
-  .how-it-works-content h3 {
+  #surround-sound-header {
+    padding-bottom: 10px;
+  }
+
+  #surround-sound-description {
+    padding-bottom: 40px;
+  }
+
+  /* .how-it-works-content h3 {
     font-size: 3.7rem;
   }
   
   .how-it-works-content p {
     font-size: 1.15rem;
-  }
+  } */
 
-  #controls-description {
+  /* #controls-description {
     font-size: 1.45rem;
-  }
+  } */
 
   .info-container {
     grid-template-columns: repeat(2, 1fr);
@@ -1034,63 +1049,83 @@ button {
 }
 
 @media (max-width: 900px) {
-  .how-it-works-content h3 {
+  /* .how-it-works-content h3 {
     font-size: 3.6rem;
   }
   
   .how-it-works-content p {
     font-size: 1.1rem;
-  }
+  } */
 
-  #controls-description {
+  /* #controls-description {
     font-size: 1.3rem;
-  }
+  } */
 }
 
 @media (max-width: 800px) {
+  #surround-sound-header {
+    padding-bottom: 5px;
+  }
+
+  #surround-sound-description {
+    padding-bottom: 45px;
+  }
+
   #wireless-header, #battery-life-header, #comfort-header {
     padding-bottom: 5px;
   }
 
-  .how-it-works-content h3 {
-    font-size: 3.5rem;
+  /* .how-it-works-content h3 {
+    font-size: 3.3rem;
   }
   
   .how-it-works-content p {
     font-size: 1rem;
-  }
+  } */
 
-  #controls-description {
+  /* #controls-description {
     font-size: 1.15rem;
-  }
+  } */
 }
 
 @media (max-width: 700px) {
-  .how-it-works-content h3 {
+  #surround-sound-header {
+    padding-bottom: 4px;
+  }
+
+  #surround-sound-description {
+    padding-bottom: 50px;
+  }
+
+  /* .how-it-works-content h3 {
     font-size: 3.3rem;
   }
   
   .how-it-works-content p {
     font-size: 0.9rem;
-  }
+  } */
 
-  #controls-description {
+  /* #controls-description {
     font-size: 1rem;
-  }
+  } */
 }
 
 @media (max-width: 600px) {
-  .how-it-works-content h3 {
+  #surround-sound-description {
+    padding-bottom: 55px;
+  }
+
+  /* .how-it-works-content h3 {
     font-size: 2.5rem;
   }
   
   .how-it-works-content p {
     font-size: 0.7rem;
-  }
+  } */
 
-  #controls-description {
+  /* #controls-description {
     font-size: 0.75rem;
-  }
+  } */
 }
 
 @media (max-width: 625px) {
@@ -1133,17 +1168,21 @@ button {
     transform: scale(0.5) translateY(-25vh);
   }
 
-  .how-it-works-content h3 {
+  #surround-sound-description {
+    padding-bottom: 60px;
+  }
+
+  /* .how-it-works-content h3 {
     font-size: 2rem;
   }
   
   .how-it-works-content p {
     font-size: 0.6rem;
-  }
+  } */
 
-  #controls-description {
+  /* #controls-description {
     font-size: 0.6rem;
-  }
+  } */
 }
 
 @media (max-width: 425px) {
@@ -1153,21 +1192,25 @@ button {
 }
 
 @media (max-width: 400px) {
+  #surround-sound-description {
+    padding-bottom: 65px;
+  }
+
   #wireless-header, #battery-life-header, #comfort-header {
     padding-bottom: 1px;
   }
 
-  .how-it-works-content h3 {
+  /* .how-it-works-content h3 {
     font-size: 1.8rem;
   }
   
   .how-it-works-content p {
     font-size: 0.5rem;
-  }
+  } */
 
-  #controls-description {
+  /* #controls-description {
     font-size: 0.5rem;
-  }
+  } */
 }
 
 @media (max-width: 350px) {
@@ -1203,17 +1246,17 @@ button {
     transform: translateX(-4vw);
   }
 
-  .how-it-works-content h3 {
+  /* .how-it-works-content h3 {
     font-size: 1.5rem;
   }
   
   .how-it-works-content p {
     font-size: 0.4rem;
-  }
+  } */
 
-  #controls-description {
+  /* #controls-description {
     font-size: 0.4rem;
-  }
+  } */
 }
 
 @media (max-height: 1079px) {
