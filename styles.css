@@ -285,12 +285,6 @@ button {
   padding-top: 85px;
 }
 
-/* #surround-sound-description {
-  font-size: 1.5rem;
-  word-spacing: 3px;
-  width: 30%;
-} */
-
 .feature-container {
   display: flex;
   flex-direction: column;
@@ -567,10 +561,6 @@ button {
   #features-start {
     padding-top: 120px;
   }
-  
-  /* .info p:not(#surround-sound-description) {
-    font-size: 1.8rem;
-  } */
 
   .how-it-works-content h3 {
     font-size: 6rem;
@@ -614,36 +604,12 @@ button {
 }
 
 @media (max-width: 1800px) {
-  /* #surround-sound-description {
-    width: 35%;
-  } */
-
   #wireless-header, #battery-life-header, #comfort-header {
-    padding-bottom: 10px;
+    padding-bottom: 8px;
   }
-
-  /* #wireless-header, #battery-life-header, #comfort-header  
-  {
-    transform-origin: bottom;
-    transform: scale(0.94);
-  }
-
-  #wireless-description, #battery-life-description, #comfort-description 
-  {
-    transform-origin: top;
-    transform: scale(0.94);
-  } */
 }
 
 @media (max-width: 1700px) {
-  /* .info h3 {
-    font-size: 3.6rem;
-  }
-
-  .info p:not(#surround-sound-description) {
-    font-size: 1.4rem;
-  } */
-
   .how-it-works-content h3 {
     font-size: 4.5rem;
   }
@@ -680,10 +646,6 @@ button {
     transform: scale(0.95);
   }
 
-  /* #surround-sound-description {
-    width: 40%;
-  } */
-
   .how-it-works-content h3 {
     font-size: 4.3rem;
   }
@@ -699,14 +661,6 @@ button {
 }
 
 @media (max-width: 1550px) {
-  /* .info h3 {
-    font-size: 3.4rem;
-  }
-
-  .info p:not(#surround-sound-description) {
-    font-size: 1.3rem;
-  } */
-
   .align h3 {
     font-size: 2.3rem;
   }
@@ -729,18 +683,6 @@ button {
   .product-img-container {
     padding-right: 15%;
   }
-
-  /* .info h3 {
-    font-size: 3.3rem;
-  }
-
-  .info p:not(#surround-sound-description) {
-    font-size: 1.2rem;
-  } */
-
-  /* #surround-sound-description {
-    width: 45%;
-  } */
 
   #controls-img {
     width: 80%;
@@ -783,14 +725,6 @@ button {
   .how-it-works-content p {
     width: 85%;
   }
-
-  /* .info p:not(#surround-sound-description) {
-    width: 35%;
-  }
-
-  #surround-sound-description {
-    margin-bottom: 40px;
-  } */
 
   .how-it-works-content h3 {
     font-size: 4.1rem;
@@ -843,18 +777,6 @@ button {
     transform: scale(0.8);
   }
 
-  /* #wireless-header, #battery-life-header, #comfort-header  
-  {
-    transform-origin: bottom;
-    transform: scale(0.88);
-  }
-
-  #wireless-description, #battery-life-description, #comfort-description 
-  {
-    transform-origin: top;
-    transform: scale(0.88);
-  } */
-
   .how-it-works-content h3 {
     font-size: 4rem;
   }
@@ -890,10 +812,6 @@ button {
     width: 150%;
   }
 
-  /* .info h3 {
-    font-size: 3rem;
-  } */
-
   .align h3 {
     font-size: 2rem;
   }
@@ -920,22 +838,6 @@ button {
   #product-content {
     transform: scale(0.7);
   }
-
-  /* #surround-sound-description {
-    width: 50%;
-  } */
-
-  /* #wireless-header, #battery-life-header, #comfort-header  
-  {
-    transform-origin: bottom;
-    transform: scale(0.82);
-  }
-
-  #wireless-description, #battery-life-description, #comfort-description 
-  {
-    transform-origin: top;
-    transform: scale(0.82);
-  } */
 
   .tech-specs-ul li h4 {
     font-size: 1.2rem;
@@ -978,18 +880,6 @@ button {
     transform: scale(0.7);
   }
 
-  /* #wireless-header, #battery-life-header, #comfort-header  
-  {
-    transform-origin: bottom;
-    transform: scale(0.77);
-  }
-
-  #wireless-description, #battery-life-description, #comfort-description 
-  {
-    transform-origin: top;
-    transform: scale(0.77);
-  } */
-  
   .how-it-works-content h3 {
     font-size: 3.8rem;
   }
@@ -1101,22 +991,6 @@ button {
     padding-right: 4vw;
   }
 
-  /* #surround-sound-description {
-    width: 60%;
-  } */
-
-  /* #wireless-header, #battery-life-header, #comfort-header  
-  {
-    transform-origin: bottom;
-    transform: scale(0.7);
-  }
-
-  #wireless-description, #battery-life-description, #comfort-description 
-  {
-    transform-origin: top;
-    transform: scale(0.7);
-  } */
-
   .how-it-works-content h3 {
     font-size: 3.7rem;
   }
@@ -1160,22 +1034,6 @@ button {
 }
 
 @media (max-width: 900px) {
-  /* #surround-sound-description {
-    margin-bottom: 40px;
-  } */
-
-  /* #wireless-header, #battery-life-header, #comfort-header  
-  {
-    transform-origin: bottom;
-    transform: scale(0.63);
-  }
-
-  #wireless-description, #battery-life-description, #comfort-description 
-  {
-    transform-origin: top;
-    transform: scale(0.63);
-  } */
-
   .how-it-works-content h3 {
     font-size: 3.6rem;
   }
@@ -1190,21 +1048,9 @@ button {
 }
 
 @media (max-width: 800px) {
-  /* #surround-sound-description {
-    width: 70%;
-  } */
-  
-  /* #wireless-header, #battery-life-header, #comfort-header  
-  {
-    transform-origin: bottom;
-    transform: scale(0.55);
+  #wireless-header, #battery-life-header, #comfort-header {
+    padding-bottom: 5px;
   }
-
-  #wireless-description, #battery-life-description, #comfort-description 
-  {
-    transform-origin: top;
-    transform: scale(0.55);
-  } */
 
   .how-it-works-content h3 {
     font-size: 3.5rem;
@@ -1220,22 +1066,6 @@ button {
 }
 
 @media (max-width: 700px) {
-  /* #surround-sound-description {
-    width: 80%;
-  } */
-
-  /* #wireless-header, #battery-life-header, #comfort-header  
-  {
-    transform-origin: bottom;
-    transform: scale(0.47);
-  }
-
-  #wireless-description, #battery-life-description, #comfort-description 
-  {
-    transform-origin: top;
-    transform: scale(0.47);
-  } */
-
   .how-it-works-content h3 {
     font-size: 3.3rem;
   }
@@ -1250,27 +1080,6 @@ button {
 }
 
 @media (max-width: 600px) {
-  /* #surround-sound-header {
-    width: 80%;
-  } */
-
-  /* #surround-sound-description {
-    width: 90%;
-    padding-bottom: 40px;
-  } */
-
-  /* #wireless-header, #battery-life-header, #comfort-header  
-  {
-    transform-origin: bottom;
-    transform: scale(0.4);
-  }
-
-  #wireless-description, #battery-life-description, #comfort-description 
-  {
-    transform-origin: top;
-    transform: scale(0.4);
-  } */
-
   .how-it-works-content h3 {
     font-size: 2.5rem;
   }
@@ -1324,26 +1133,6 @@ button {
     transform: scale(0.5) translateY(-25vh);
   }
 
-  /* #surround-sound-header {
-    font-size: 2.9rem;
-  } */
-
-  /* #surround-sound-description {
-    font-size: 1.4rem;
-  } */
-
-  /* #wireless-header, #battery-life-header, #comfort-header  
-  {
-    transform-origin: bottom;
-    transform: scale(0.33);
-  }
-
-  #wireless-description, #battery-life-description, #comfort-description 
-  {
-    transform-origin: top;
-    transform: scale(0.33);
-  } */
-
   .how-it-works-content h3 {
     font-size: 2rem;
   }
@@ -1364,24 +1153,9 @@ button {
 }
 
 @media (max-width: 400px) {
-  /* #surround-sound-header {
-    font-size: 2.3rem;
-  } */
-
-  /* #surround-sound-description {
-    font-size: 1.1rem;
-  } */
-
-  /* #wireless-header, #battery-life-header, #comfort-header  
-  {
-    transform-origin: bottom;
-    transform: scale(0.26);
+  #wireless-header, #battery-life-header, #comfort-header {
+    padding-bottom: 1px;
   }
-
-  #wireless-description, #battery-life-description, #comfort-description {
-    transform-origin: top;
-    transform: scale(0.26);
-  } */
 
   .how-it-works-content h3 {
     font-size: 1.8rem;
@@ -1394,16 +1168,6 @@ button {
   #controls-description {
     font-size: 0.5rem;
   }
-}
-
-@media (max-width: 375px) {
-  /* #surround-sound-header {
-    font-size: 1.9rem;
-  } */
-
-  /* #surround-sound-description {
-    font-size: 1rem;
-  } */
 }
 
 @media (max-width: 350px) {
@@ -1427,17 +1191,6 @@ button {
   #product-content {
     transform: scale(0.45) translateY(-30vh);
   }
-
-  /* #wireless-header, #battery-life-header, #comfort-header  
-  {
-    transform-origin: bottom;
-    transform: scale(0.22);
-  }
-
-  #wireless-description, #battery-life-description, #comfort-description {
-    transform-origin: top;
-    transform: scale(0.22);
-  } */
 }
 
 @media (max-width: 325px) {
