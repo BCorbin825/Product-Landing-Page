@@ -276,6 +276,10 @@ button {
   z-index: 1;
 }
 
+#surround-sound-container {
+  
+}
+
 #surround-sound-img {
   width: 65%;
   margin-top: -75px;
