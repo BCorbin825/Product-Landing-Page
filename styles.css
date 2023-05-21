@@ -401,6 +401,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow-y: hidden;
 }
 
 #tech-specs-container {
