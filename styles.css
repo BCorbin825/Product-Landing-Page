@@ -552,16 +552,6 @@ button {
   }
 }
 
-@media (max-width: 1360px) {
-  /* #surround-sound-header {
-    padding-bottom: 15px;
-  }
-
-  #surround-sound-description {
-    padding-bottom: 20px;
-  } */
-}
-
 @media (max-width: 1250px) {
   #nav-list li {
     padding: 0;
@@ -570,16 +560,6 @@ button {
   .nav-link {
     margin: 0 20px;
   }
-}
-
-@media (max-width: 1150px) {
-  /* #surround-sound-header {
-    padding-bottom: 12px;
-  }
-
-  #surround-sound-description {
-    padding-bottom: 30px;
-  } */
 }
 
 @media (max-width: 1000px) {
@@ -644,14 +624,6 @@ button {
     display: none;
   }
 
-  /* #surround-sound-header {
-    padding-bottom: 10px;
-  }
-
-  #surround-sound-description {
-    padding-bottom: 40px;
-  } */
-
   .info-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -682,53 +654,12 @@ button {
 }
 
 @media (max-width: 800px) {
-  /* #surround-sound-header {
-    padding-bottom: 5px;
-  }
-
-  #surround-sound-description {
-    padding-bottom: 45px;
-  } */
-
   #wireless-header, #battery-life-header, #comfort-header {
     padding-bottom: 5px;
   }
 }
 
-@media (max-width: 700px) {
-  /* #surround-sound-header {
-    padding-bottom: 4px;
-  }
-
-  #surround-sound-description {
-    padding-bottom: 50px;
-  } */
-}
-
-/* @media (max-width: 600px) {
-  #surround-sound-description {
-    padding-bottom: 55px;
-  }
-} */
-
-/* @media (max-width: 550px) {
-  .info-container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-} */
-
-/* @media (max-width: 500px) {
-  #surround-sound-description {
-    padding-bottom: 60px;
-  }
-} */
-
-
 @media (max-width: 400px) {
-  /* #surround-sound-description {
-    padding-bottom: 65px;
-  } */
-
   #wireless-header, #battery-life-header, #comfort-header {
     padding-bottom: 1px;
   }
