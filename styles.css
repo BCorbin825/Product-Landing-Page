@@ -165,6 +165,7 @@ button {
   width: 100vw;
   justify-content: center;
   align-items: center;
+  margin-top: 5vh;
 }
 
 #product-wrapper {
@@ -175,7 +176,7 @@ button {
 }
 
 .product-img {
-  width: 35vw;
+  width: 35vmax;
 }
 
 #product-content {
