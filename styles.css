@@ -243,11 +243,6 @@ button {
 }
 
 /* ------------ Features Section ------------- */
-
-/* #features-start {
-  height: 100vh;
-} */
-
 .info {
   display: flex;
   flex-direction: column;
@@ -414,8 +409,8 @@ button {
 
 .align h3 {
   font-size: 2.5vmax;
-  border-bottom: 4px solid var(--text-color);
-  border-radius: 10px;
+  border-bottom: 0.4vmax solid var(--text-color);
+  border-radius: 0.8vmax;
 }
 
 .tech-specs-ul:nth-child(-n + 3) {
@@ -458,22 +453,18 @@ button {
   flex-direction: column;
   justify-content: center;
   width: 100vw;
-  height: 25vh;
   background-color: var(--text-color);
 }
 
 #form-title {
   color: #111111;
-  font-size: 2rem;
+  font-size: 1.8vw;
 }
 
 #form-title-container {
   display: flex;
   justify-content: center;
-  padding-left: 45px;
-  margin-bottom: 20px;
-  padding: 0;
-  margin-top: 30px;
+  margin: 3vmin 0 1.2vh 0;
 }
 
 #form {
@@ -487,23 +478,23 @@ button {
 
 #email {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
+  padding: 0.8vw;
+  margin-bottom: 1vh;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1.2rem;
+  border-radius: 0.4vmin;
+  font-size: 1.2vw;
   text-align: center;
 }
 
 #submit {
   width: 80%;
-  padding: 10px;
+  padding: 0.7vw;
   background-color: #4CAF50;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 0.4vmin;
   cursor: pointer;
-  font-size: 1.25rem;
+  font-size: 1.2vw;
 }
 
 #submit:hover {
@@ -513,8 +504,8 @@ button {
 /* ----- Copyright ----- */
 .copyright {
   text-align: center;
-  margin-top: 20px;
-  font-size: 0.8rem;
+  margin-top: 2vh;
+  font-size: 0.8vw;
   color: #666;
   line-height: 1.4;
 }
@@ -524,84 +515,6 @@ button {
 }
 
 /* ------------------------------------ Media ------------------------------------ */
-/* @media (min-width: 1921px) {
-  #header-img {
-    width: 60px;
-  }
-
-  #logo h1 {
-    font-size: 2rem;
-  }
-
-  .nav-link {
-    font-size: 1.6rem;
-  }
-
-  .icon {
-    transform: scale(1.8);
-  }
-
-  .product-img-container {
-    transform: scale(1.7);
-  }
-
-  #product-title {
-    font-size: 7rem;
-  }
-
-  #slogan {
-    font-size: 1.4rem;
-  }
-
-  #add-to-cart {
-    font-size: 1.4rem;
-  }
-
-  #features-start {
-    padding-top: 120px;
-  }
-
-  .how-it-works-content h3 {
-    font-size: 6rem;
-  }
-  
-  .how-it-works-content p {
-    font-size: 1.7rem;
-  }
-
-  #controls-description {
-    font-size: 2.8rem;
-  }
-
-  .align h3 {
-    font-size: 3.2rem;
-  }
-  
-  .tech-specs-ul li {
-    font-size: 2rem;
-  }
-  
-  .tech-specs-ul p {
-    font-size: 1.6rem;
-  }
-
-  #form-title {
-    font-size: 2.6rem;
-  }
-
-  #email {
-    font-size: 1.7rem;
-  }
-  
-  #submit {
-    font-size: 1.6rem;
-  }
-
-  .copyright {
-    font-size: 1rem;
-  }
-} */
-
 @media (max-width: 1800px) {
   #wireless-header, #battery-life-header, #comfort-header {
     padding-bottom: 8px;
@@ -640,12 +553,6 @@ button {
   }
 }
 
-@media (max-width: 1400px) {
-  #email {
-    font-size: 1.1rem;
-  }
-}
-
 @media (max-width: 1360px) {
   #product-content {
     margin-right: 13vw;
@@ -672,10 +579,6 @@ button {
   #product-content {
     margin-right: 12vw;
     transform: scale(0.8);
-  }
-
-  #email {
-    font-size: 1.05rem;
   }
 }
 
@@ -711,10 +614,6 @@ button {
   #product-content {
     transform: scale(0.7);
   }
-
-  #email {
-    font-size: 1rem;
-  }
 }
 
 @media (max-width: 1150px) {
@@ -732,10 +631,6 @@ button {
 
   #surround-sound-description {
     padding-bottom: 30px;
-  }
-
-  #email {
-    font-size: 0.9rem;
   }
 }
 
@@ -764,23 +659,12 @@ button {
     transform: scale(0.65);
     width: 33%;
   }
-
-  #email {
-    font-size: 0.8rem;
-  }
-
-  #submit {
-    font-size: 1.1rem;
-  }
 }
 
 @media (max-width: 1000px) {
-  #product {
-    height: 100vh;
-  }
-
   #product-wrapper {
     flex-direction: column;
+    transform: translateX(0);
   }
 
   .product-img-container {
@@ -837,12 +721,11 @@ button {
 
   .info-container {
     grid-template-columns: repeat(2, 1fr);
-    height: 100vh;
   }
-}
 
-@media (max-width: 900px) {
-
+  .tech-specs-ul:nth-child(-n + 4) {
+    margin-bottom: 2vh;
+  }
 }
 
 @media (max-width: 800px) {
@@ -890,6 +773,12 @@ button {
 
   .icon {
     padding-right: 4.5vw;
+  }
+}
+
+@media (max-width: 550px) {
+  .info-container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
