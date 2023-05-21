@@ -232,6 +232,10 @@ button {
 }
 
 /* ------------ Features Section ------------- */
+#features {
+  overflow-y: hidden;
+}
+
 .info {
   display: flex;
   flex-direction: column;
