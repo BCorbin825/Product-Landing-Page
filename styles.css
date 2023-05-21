@@ -276,10 +276,6 @@ button {
   z-index: 1;
 }
 
-#surround-sound-container {
-  
-}
-
 #surround-sound-img {
   width: 65%;
   margin-top: -75px;
@@ -309,7 +305,7 @@ button {
 }
 
 #battery-life-container {
-  transform: translateX(20%);
+  transform: translateX(22%);
 }
 
 #battery-life-header, #battery-life-description {
