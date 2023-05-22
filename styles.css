@@ -592,28 +592,29 @@ button {
 
   #product-title {
     margin-top: 20px;
-    font-size: 3vh;
+    font-size: 3.5vh;
   }
 
   #slogan {
-    font-size: 1.2vh;
+    font-size: 1.5vh;
     width: 100%;
   }
 
   #price {
     padding-top: 2vh;
-    font-size: 3vh;
+    font-size: 3.3vh;
   }
 
   #add-to-cart {
-    font-size: 1vh;
-    padding: 0.8vh 2vh;
+    font-size: 1.3vh;
+    padding: 1.2vh 3vh;
     border: 0.2vw solid var(--text-color);
     border-radius: 0.4vw;
   }
 
   #color-img-container {
     justify-content: space-evenly;
+    margin-top: 4vh;
   }
 
   #color-img-container * {
