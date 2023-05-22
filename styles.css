@@ -628,6 +628,61 @@ button {
     display: none;
   }
 
+  #surround-sound-container {
+    margin-top: 0;
+    height: 120%;
+  }
+
+  #surround-sound-container h3 {
+    font-size: 6vw;
+  }
+  
+  #surround-sound-container p {
+    font-size: 2.5vw;
+    width: 60%;
+  }
+  
+  #surround-sound-info {
+    transform: translateY(3vw);
+  }
+  
+  #surround-sound-img {
+    margin-top: 7vh;
+    width: 90%;
+  }
+
+  #wireless-container {
+    transform: translateX(-20%);
+  }
+
+  #beats-lebron-img {
+    width: 80%;
+  }
+
+  #beats-battery-img {
+    width: 90%;
+  }
+
+  #battery-life-container {
+    transform: translateX(24%);
+  }
+
+  #beats-comfort-img {
+    width: 80%;
+  }
+
+  #comfort-container {
+    transform: translateX(-22%);
+  }
+
+  .info h3 {
+    font-size: 4vw;
+  }
+
+  .info p {
+    font-size: 1.8vw;
+  }
+
   .info-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -637,7 +692,7 @@ button {
   }
 
   .align h3 {
-    font-size: 3vw;
+    font-size: 4vw;
   }
   
   .tech-specs-ul {
@@ -649,11 +704,34 @@ button {
   }
   
   .tech-specs-ul h4 {
-    font-size: 1.9vw;
+    font-size: 2.3vw;
   }
   
   .tech-specs-ul p {
-    font-size: 1.6vw;
+    font-size: 1.8vw;
+  }
+  
+  .how-it-works-content h3 {
+    font-size: 6vw;
+    padding-bottom: 5px;
+  }
+  
+  .how-it-works-content p {
+    font-size: 2vw;
+    width: 90%;
+  }
+  
+  #controls-img {
+    width: 80%;
+  }
+  
+  #controls-description-container {
+    width: 36%;
+    transform: translateX(-54%);
+  }
+  
+  #controls-description {
+    font-size: 2.3vw;
   }
 
   #form-title {
@@ -676,7 +754,7 @@ button {
 
   .copyright {
     margin-bottom: 2vh;
-    font-size: 1.2vw;
+    font-size: 1.4vw;
   }
   
   .copyright p {
