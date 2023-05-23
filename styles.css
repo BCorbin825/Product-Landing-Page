@@ -48,7 +48,7 @@ button {
 }
 
 .highlight {
-  border-bottom: 2px solid var(--text-color);
+  border-bottom: 4px solid var(--text-color);
   border-radius: 4px;
 }
 
@@ -84,7 +84,8 @@ button {
 #header {
   display: flex;
   position: fixed;
-  background-color: rgba(17, 17, 17, 0.8);
+  background: rgba(17, 17, 17, 0.8);
+  backdrop-filter: blur(5px);
   width: 100vw;
   height: 6vh;
   min-height: 55px;
@@ -636,7 +637,7 @@ button {
   }
 
   .product-img {
-    width: 35vmax;
+    width: 32vmax;
   }
 
   #product-content {
@@ -837,6 +838,10 @@ button {
 @media (max-height: 850px) {
   .dropdown-menu {
     top: 70px;
+  }
+
+  .highlight {
+    border-bottom: 3px solid var(--text-color);
   }
 }
  
