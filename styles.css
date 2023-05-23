@@ -325,7 +325,7 @@ button {
 
 #surround-sound-img {
   width: 65%;
-  margin-top: 10vw;
+  margin-top: 10vmax;
 }
 
 .feature-container {
@@ -601,7 +601,7 @@ button {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1000px) and (min-height: 600px) {
   #logo h1 {
     padding-left: 5px;
     font-size: 1.6rem;
@@ -682,9 +682,17 @@ button {
     display: none;
   }
 
+  #features {
+    margin-top: 10vh;
+  }
+
   #surround-sound-container {
     margin-top: 1vmax;
     height: 120%;
+  }
+
+  #surround-sound-img {
+    margin-top: 0;
   }
 
   #surround-sound-container h3 {
