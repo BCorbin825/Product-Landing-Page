@@ -1,7 +1,7 @@
 const navigationElements = document.querySelectorAll('.active-section li');
 
-const menu_button = document.getElementById("menu-button");
-const menu_icon = document.getElementById("menu-icon");
+const menu_open = document.getElementById("menu-btn");
+const menu_close = document.getElementById("menu-close-btn");
 const dropdown_menu = document.querySelector('.dropdown-menu');
 
 const gold_btn = document.getElementById("gold-button");
@@ -57,11 +57,16 @@ window.addEventListener('resize', function() {
   }
 });
 
-menu_button.addEventListener("click", function() { 
-  dropdown_menu.classList.toggle('hidden');
-  var isClosed = dropdown_menu.classList.contains('hidden');
+menu_open.addEventListener("click", function() { 
+  dropdown_menu.classList.remove('hidden');
+  menu_open.classList.add("hidden");
+  menu_close.classList.remove("hidden");
+});
 
-  menu_icon.className = isClosed ? 'gg-menu' : 'gg-closed';
+menu_close.addEventListener("click", function() { 
+  dropdown_menu.classList.add('hidden');
+  menu_open.classList.remove("hidden");
+  menu_close.classList.add("hidden");
 });
 
 gold_btn.addEventListener("click", function() {
