@@ -606,6 +606,15 @@ button {
     font-size: 1.4rem;
   }
 
+  #header-img {
+    height: 4.5vmin;
+    min-height: 32px;
+  }
+
+  .product-img {
+    width: 30vmax;
+  }
+
   .nav-link {
     font-size: 1rem;
     margin: 0 15px;

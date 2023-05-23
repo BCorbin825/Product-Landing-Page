@@ -58,8 +58,9 @@ window.addEventListener('scroll', () => {
 window.addEventListener('resize', function() {
   const menu_icon_container = document.getElementById("menu-icon-container");
   var screenWidth = window.innerWidth;
+  var screenHeight = window.innerHeight;
 
-  if (screenWidth <= 1000) {
+  if (screenWidth <= 1000 && screenHeight > 600) {
     menu_icon_container.classList.remove("hidden");
     if (menu_close.classList.contains("hidden")) {
       menu_open.classList.remove("hidden");
