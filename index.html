@@ -8,6 +8,7 @@
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/shopping-cart.css' rel='stylesheet'>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/close.css' rel='stylesheet'>
   </head>
   <body>
     <!-------- Top bar -------->
@@ -31,7 +32,18 @@
             <button id="menu-button">
               <i class="gg-menu" id="menu-icon"></i>
             </button>
+            <button class="hidden" id="menu-close-button">
+              <i class="gg-close"></i>
+            </button>
           </div>
+        </div>
+        <div class="dropdown_menu">
+          <ul>
+            <li><a class="nav-link highlight" id="overview-nav" href="#product">Overview</a></li>
+            <li><a class="nav-link" id="features-nav" href="#features">Features</a></li>
+            <li><a class="nav-link" id="how-it-works-nav" href="#how-it-works">How It Works</a></li>
+            <li><a class="nav-link" id="tech-specs-nav" href="#tech-specs">Tech Specs</a></li>
+          </ul>
         </div>
       </header>
     </section>

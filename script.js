@@ -1,12 +1,8 @@
 const navigationElements = document.querySelectorAll('#nav-list li');
 
+const menu_toggle = document.querySelector(".toggle");
 const menu_button = document.getElementById("menu-button");
-const menu_icon = document.getElementById("menu-icon");
-
-const overview_nav = document.getElementById("overview-nav");
-const features_nav = document.getElementById("features-nav");
-const how_it_works_nav = document.getElementById("how-it-works-nav");
-const tech_specs_nav = document.getElementById("tech-specs-nav");
+const menu_close_button = document.getElementById("menu-close-button");
 
 const gold_btn = document.getElementById("gold-button");
 const black_btn = document.getElementById("black-button");
@@ -61,8 +57,9 @@ window.addEventListener('resize', function() {
   }
 });
 
-menu_button.addEventListener("click", function() {
-  menu_icon.classList.toggle("rotate90");
+menu_toggle.addEventListener("click", function() {
+  menu_button.classList.toggle("hidden");
+  menu_close_button.classList.toggle("hidden");
 });
 
 gold_btn.addEventListener("click", function() {
