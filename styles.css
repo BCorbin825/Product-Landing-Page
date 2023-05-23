@@ -157,14 +157,30 @@ button {
   transform: translateY(-3px);
 }
 
-.dropdown_menu {
+.dropdown-menu {
   position: absolute;
+  width: 30vw;
+  min-width: 275px;
   right: 5vw;
-  top: 7vh;
+  top: 7vmax;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 1vw;
 }
 
-.dropdown_menu ul {
+.dropdown-menu ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropdown-menu li {
+  margin: 2vw 0;
+}
+
+.dropdown-menu a {
+  font-size: 2.8vmax;
 }
 
 #menu-icon {
@@ -587,7 +603,7 @@ button {
 @media (max-width: 1000px) {
   #logo h1 {
     padding-left: 5px;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .icon {
@@ -604,7 +620,7 @@ button {
   }
 
   #product {
-    margin-top: 1.5vh;
+    margin-top: 1.5vmax;
   }
 
   #product-wrapper {
@@ -613,11 +629,14 @@ button {
   }
 
   .product-img-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
     padding: 0;
   }
 
   .product-img {
-    width: 35vh;
+    width: 35vmax;
   }
 
   #product-content {
@@ -628,37 +647,34 @@ button {
 
   #product-title {
     margin-top: 20px;
-    font-size: 3.5vh;
+    font-size: 6.5vw;
   }
 
   #slogan {
-    font-size: 1.5vh;
+    font-size: 2.8vw;
     width: 100%;
   }
 
   #price {
-    padding-top: 2vh;
-    font-size: 3.3vh;
+    padding-top: 2vmax;
+    font-size: 5.2vw;
   }
 
   #add-to-cart {
-    font-size: 1.3vh;
-    padding: 1.2vh 3vh;
+    font-size: 2.5vw;
+    padding: 1.2vmax 3vmax;
     border: 0.2vw solid var(--text-color);
-    border-radius: 0.4vw;
+    border-radius: 0.4vmin;
   }
 
   #color-img-container {
-    justify-content: space-evenly;
-    margin-top: 4vh;
-  }
-
-  #color-img-container * {
-    margin: 0;
+    justify-content: center;
+    margin-top: 4vmax;
   }
 
   .color-img {
-    width: 6vh;
+    width: 12vw;
+    margin: 0 5vw;
   }
 
   #nav-list .nav-link {
@@ -666,7 +682,7 @@ button {
   }
 
   #surround-sound-container {
-    margin-top: 0;
+    margin-top: 1vmax;
     height: 120%;
   }
 
@@ -805,12 +821,25 @@ button {
   }
 }
 
+@media (max-width: 576px) {
+  .dropdown-menu {
+    left: 5vw;
+    width: unset;
+  }
+}
+
 @media (max-width: 400px) {
   #wireless-header, #battery-life-header, #comfort-header {
     padding-bottom: 1px;
   }
 }
 
+@media (max-height: 850px) {
+  .dropdown-menu {
+    top: 70px;
+  }
+}
+ 
 /* --------------------------------- Animations --------------------------------- */
 @keyframes float {
   0% {
