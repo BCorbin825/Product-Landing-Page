@@ -601,6 +601,22 @@ button {
   }
 }
 
+@media (max-width: 1000px) and (max-height: 600px) {
+  #logo h1 {
+    font-size: 1.4rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    margin: 0 15px;
+  }
+
+  .icon {
+    transform: scale(1.2);
+    margin-right: 1vw;
+  }
+}
+
 @media (max-width: 1000px) and (min-height: 600px) {
   #logo h1 {
     padding-left: 5px;
