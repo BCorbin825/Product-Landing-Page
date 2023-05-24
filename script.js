@@ -29,10 +29,10 @@ var screenHeight = window.innerHeight;
 /* ---------------------------- Dynamic code ---------------------------- */
 document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('load', function() {
+    window.scrollTo(0, 0);
     dynamicScreen()
     dynamicSectionPadding();
-    keepOnScreen();
-    window.scrollTo(0, 0);
+    // keepOnScreen();
   });
 });
 
@@ -140,33 +140,34 @@ function dynamicSectionPadding() {
   var howItWorks = sections[2];
   var techSpecs = sections[3];
   if (sourround_sound_info.offsetTop < topBarHeight) {
-    features.style.paddingTop = topBarHeight + topBarHeight/4 + 'px';
+    features.style.paddingTop = topBarHeight + 'px';
+    features.style.marginTop = 0 + 'px';
   }
   howItWorks.style.paddingTop = topBarHeight + topBarHeight/3 + 'px';
   techSpecs.style.paddingTop = topBarHeight + topBarHeight/3 + 'px';
 }
 
 // Keeps product section from going off top of screen
-function keepOnScreen() {
-  var product = sections[0];
-  var productRect = product.getBoundingClientRect();
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  var isOffTop = (productRect.top + scrollTop) < scrollTop;
+// function keepOnScreen() {
+//   var product = sections[0];
+//   var productRect = product.getBoundingClientRect();
+//   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//   var isOffTop = (productRect.top + scrollTop) < scrollTop;
 
-  if (isOffTop) {
-    var distanceOffTop = Math.abs(productRect.top);
-    productPadding =  distanceOffTop - distanceOffTop/4;
-    product.style.paddingTop = productPadding + 'px';
-    product.style.paddingBottom = productPadding/2 + 'px';
-  }
-  else {
-    var zero = 0;
-    if (screenWidth <= 1000 && screenHeight >= 600) {
-      product.style.paddingTop = '1.5vmax';
-    }
-    else {
-      product.style.paddingTop = '6vh';
-    }
-    product.style.paddingBottom = zero + 'px';
-  }
-}
+//   if (isOffTop) {
+//     var distanceOffTop = Math.abs(productRect.top);
+//     productPadding =  distanceOffTop - distanceOffTop/4;
+//     product.style.paddingTop = productPadding + 'px';
+//     product.style.paddingBottom = productPadding/2 + 'px';
+//   }
+//   else {
+//     var zero = 0;
+//     if (screenWidth <= 1000 && screenHeight >= 600) {
+//       product.style.paddingTop = '1.5vmax';
+//     }
+//     else {
+//       product.style.paddingTop = '6vh';
+//     }
+//     product.style.paddingBottom = zero + 'px';
+//   }
+// }
