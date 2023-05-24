@@ -76,7 +76,6 @@ window.addEventListener('scroll', () => {
 window.addEventListener('resize', function() {
   dynamicScreen()
   dynamicSectionPadding();
-  keepOnScreen();
 });
 
 // Handles menu open button clicks
