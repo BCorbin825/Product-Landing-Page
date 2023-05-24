@@ -77,10 +77,6 @@ button {
 }
 
 /* ------------- Top Bar Section ------------- */
-/* #top-bar * {
-  z-index: 9999;
-} */
-
 #top-bar {
   top: 0;
   display: flex;
@@ -580,24 +576,6 @@ button {
   }
 }
 
-/* @media (max-width: 1700px) {
-  #surround-sound-container {
-    margin-top: 30px;
-  }
-} */
-
-/* @media (max-width: 1600px) {
-  #surround-sound-container {
-    margin-top: 40px;
-  }
-} */
-
-/* @media (max-width: 1500px) {
-  #surround-sound-container {
-    margin-top: 45px;
-  }
-} */
-
 @media (max-width: 1250px) {
   #nav-list li {
     padding: 0;
@@ -719,7 +697,6 @@ button {
   }
 
   #surround-sound-container {
-    /* margin-top: 1vmax; */
     height: 120%;
   }
 

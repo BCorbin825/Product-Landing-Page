@@ -139,7 +139,7 @@ function dynamicSectionPadding() {
   var features = sections[1];
   var howItWorks = sections[2];
   var techSpecs = sections[3];
-  if (sourround_sound_info.offsetTop < topBarHeight) {
+  if (sourround_sound_info.offsetTop < topBarHeight && screenWidth <= 1000) {
     features.style.paddingTop = topBarHeight + 'px';
     features.style.marginTop = 0 + 'px';
   }
