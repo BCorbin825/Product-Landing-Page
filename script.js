@@ -20,23 +20,16 @@ const gold_img = document.getElementById("gold");
 const black_img = document.getElementById("black");
 const white_img = document.getElementById("white");
 
-/* ---------------------------- Dynamic code ---------------------------- */
-// Adds padding to each sections dynamically
 var topBarHeight = top_bar.offsetHeight;
-var howItWorks = sections[2];
-var techSpecs = sections[3];
-howItWorks.style.paddingTop = topBarHeight + topBarHeight/4 + 'px';
-techSpecs.style.paddingTop = topBarHeight + topBarHeight/3 + 'px';
 
-// Keeps product section from going off top of screen
-// var productRect = product_wrapper.getBoundingClientRect();
-// var isOffTop = productRect.top < 0;
-// if (isOffTop) {
-//   var distanceOffTop = Math.abs(productRect.top);
-//   var product = sections[0];
-//   product_wrapper.style.paddingTop = distanceOffTop + topBarHeight + 'px';
-//   console.log('Distance off the top of the screen:', distanceOffTop, 'pixels');
-// }
+/* ---------------------------- Dynamic code ---------------------------- */
+document.addEventListener('DOMContentLoaded', function() {
+  window.addEventListener('load', function() {
+    dynamicScreen()
+    dynamicSectionPadding();
+    keepOnScreen();
+  });
+});
 
 // Handles highlighting the current section
 window.addEventListener('scroll', () => {
@@ -84,31 +77,9 @@ window.addEventListener('scroll', () => {
 
 // Handles screen changes on resize
 window.addEventListener('resize', function() {
-  const menu_icon_container = document.getElementById("menu-icon-container");
-  var screenWidth = window.innerWidth;
-  var screenHeight = window.innerHeight;
-
-  if (screenWidth <= 1000 && screenHeight > 600) {
-    menu_icon_container.classList.remove("hidden");
-    if (menu_close.classList.contains("hidden")) {
-      menu_open.classList.remove("hidden");
-    }
-  }
-  else if (screenWidth > 1000) {
-    menu_icon_container.classList.add("hidden");
-    dropdown_menu.classList.add('hidden');
-    menu_close.classList.add("hidden");
-  }
-
-  // if (isOffTop) {
-  //   var distanceOffTop = Math.abs(productRect.top);
-  //   var product = sections[0];
-  //   product.style.paddingTop = distanceOffTop + topBarHeight + 'px';
-  //   console.log('Distance off the top of the screen:', distanceOffTop, 'pixels');
-  // }
-  // else {
-  //   product.style.paddingTop = 0 + 'px';
-  // }
+  dynamicScreen()
+  dynamicSectionPadding();
+  keepOnScreen();
 });
 
 // Handles menu open button clicks
@@ -148,3 +119,52 @@ white_btn.addEventListener("click", function() {
     gold_img.classList.add("hidden");
     document.documentElement.style.setProperty("--hover-color", "#ededed");
 });
+
+/* --------------------------- Functions --------------------------- */
+// Display page differently based on screen size
+function dynamicScreen() {
+  const menu_icon_container = document.getElementById("menu-icon-container");
+  var screenWidth = window.innerWidth;
+  var screenHeight = window.innerHeight;
+
+  if (screenWidth <= 1000 && screenHeight > 600) {
+    menu_icon_container.classList.remove("hidden");
+    if (menu_close.classList.contains("hidden")) {
+      menu_open.classList.remove("hidden");
+    }
+  }
+  else if (screenWidth > 1000) {
+    menu_icon_container.classList.add("hidden");
+    dropdown_menu.classList.add('hidden');
+    menu_close.classList.add("hidden");
+  }
+}
+
+// Adds padding to each sections dynamically
+function dynamicSectionPadding() {
+  var howItWorks = sections[2];
+  var techSpecs = sections[3];
+  howItWorks.style.paddingTop = topBarHeight + topBarHeight/4 + 'px';
+  techSpecs.style.paddingTop = topBarHeight + topBarHeight/3 + 'px';
+}
+
+// Keeps product section from going off top of screen
+function keepOnScreen() {
+  var product = sections[0];
+  var productRect = product.getBoundingClientRect();
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  var isOffTop = (productRect.top + scrollTop) < scrollTop;
+
+  if (isOffTop) {
+    var distanceOffTop = Math.abs(productRect.top);
+    productPadding =  distanceOffTop - distanceOffTop/4;
+    product.style.paddingTop = productPadding + 'px';
+    product.style.paddingBottom = productPadding/2 + 'px';
+    console.log('Distance off the top of the screen:', distanceOffTop, 'pixels');
+  }
+  else {
+    var zero = 0;
+    product.style.paddingTop =  '6vh';
+    product.style.paddingBottom = zero + 'px';
+  }
+}

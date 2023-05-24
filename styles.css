@@ -202,7 +202,7 @@ button {
   width: 100vw;
   justify-content: center;
   align-items: center;
-  margin-top: 5vh;
+  overflow-y: visible;
 }
 
 #product-wrapper {
@@ -211,6 +211,7 @@ button {
   justify-content: center;
   align-items: center;
   transform: translateX(-3vw);
+  overflow-y: visible;
 }
 
 .product-img {
