@@ -74,7 +74,7 @@ window.addEventListener('scroll', () => {
 
 // Handles screen changes on resize
 window.addEventListener('resize', function() {
-  dynamicScreen()
+  dynamicScreen();
   dynamicSectionPadding();
 });
 
