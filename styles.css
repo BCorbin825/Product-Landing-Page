@@ -77,11 +77,12 @@ button {
 }
 
 /* ------------- Top Bar Section ------------- */
-#top-bar * {
+/* #top-bar * {
   z-index: 9999;
-}
+} */
 
-#header {
+#top-bar {
+  top: 0;
   display: flex;
   position: fixed;
   background: rgba(17, 17, 17, 0.8);
@@ -91,6 +92,7 @@ button {
   min-height: 55px;
   justify-content: space-between;
   align-items: center;
+  z-index: 9999;
 }
 
 #logo {
@@ -204,6 +206,7 @@ button {
 }
 
 #product-wrapper {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -269,6 +272,7 @@ button {
 /* ------------ Features Section ------------- */
 #features {
   overflow-y: hidden;
+  padding-bottom: 10vmin;
 }
 
 .info {
@@ -375,8 +379,9 @@ button {
 }
 
 #how-it-works {
-  margin-top: 75px;
-  padding: 5vmin 0 13vmin 0;
+  /* margin-top: 75px; */
+  /* padding: 5vmin 0 13vmin 0; */
+  padding-bottom: 13vmin;
 }
 
 #how-it-works-wrapper {
@@ -389,7 +394,8 @@ button {
   display: flex;
   justify-content: space-around;
   text-align: center;
-  padding: 4vmin 0 8vmin 0;
+  /* padding: 4vmin 0 8vmin 0; */
+  padding-bottom: 8vmin;
 }
 
 .how-it-works-content {
@@ -443,14 +449,14 @@ button {
   overflow-y: hidden;
 }
 
-#tech-specs-container {
+/* #tech-specs-container {
   padding: 9vmin 0 2vmin 0;
-}
+} */
 
 .info-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: 0 3.5vmin 0 3.5vmin;
+  margin: 0 3.5vmin;
 }
 
 .align {
@@ -573,23 +579,23 @@ button {
   }
 }
 
-@media (max-width: 1700px) {
+/* @media (max-width: 1700px) {
   #surround-sound-container {
     margin-top: 30px;
   }
-}
+} */
 
-@media (max-width: 1600px) {
+/* @media (max-width: 1600px) {
   #surround-sound-container {
     margin-top: 40px;
   }
-}
+} */
 
-@media (max-width: 1500px) {
+/* @media (max-width: 1500px) {
   #surround-sound-container {
     margin-top: 45px;
   }
-}
+} */
 
 @media (max-width: 1250px) {
   #nav-list li {
@@ -712,7 +718,7 @@ button {
   }
 
   #surround-sound-container {
-    margin-top: 1vmax;
+    /* margin-top: 1vmax; */
     height: 120%;
   }
 

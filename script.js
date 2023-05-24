@@ -1,5 +1,12 @@
+
+/* ------------------------------ Constants ------------------------------ */
 const nav_elements = document.querySelectorAll('.active-section li');
 const dropdown_elements = document.querySelectorAll('.dropdown-menu .active-section li');
+
+const top_bar = document.getElementById("top-bar");
+const sections = document.querySelectorAll('section');
+
+const product_wrapper = document.getElementById('product-wrapper');
 
 const menu_open = document.getElementById("menu-btn");
 const menu_close = document.getElementById("menu-close-btn");
@@ -13,6 +20,25 @@ const gold_img = document.getElementById("gold");
 const black_img = document.getElementById("black");
 const white_img = document.getElementById("white");
 
+/* ---------------------------- Dynamic code ---------------------------- */
+// Adds padding to each sections dynamically
+var topBarHeight = top_bar.offsetHeight;
+var howItWorks = sections[2];
+var techSpecs = sections[3];
+howItWorks.style.paddingTop = topBarHeight + topBarHeight/4 + 'px';
+techSpecs.style.paddingTop = topBarHeight + topBarHeight/3 + 'px';
+
+// Keeps product section from going off top of screen
+// var productRect = product_wrapper.getBoundingClientRect();
+// var isOffTop = productRect.top < 0;
+// if (isOffTop) {
+//   var distanceOffTop = Math.abs(productRect.top);
+//   var product = sections[0];
+//   product_wrapper.style.paddingTop = distanceOffTop + topBarHeight + 'px';
+//   console.log('Distance off the top of the screen:', distanceOffTop, 'pixels');
+// }
+
+// Handles highlighting the current section
 window.addEventListener('scroll', () => {
   // Get the current scroll position and viewport height
   const scrollPosition = window.scrollY;
@@ -27,7 +53,8 @@ window.addEventListener('scroll', () => {
     // Get the offset top, height, and visible area of the section
     const sectionTop = section.offsetTop;
     const sectionHeight = section.offsetHeight;
-    const visibleArea = Math.min(scrollPosition + viewportHeight, sectionTop + sectionHeight) - Math.max(scrollPosition, sectionTop);
+    const visibleArea = Math.min(scrollPosition + viewportHeight, sectionTop + sectionHeight) - 
+                        Math.max(scrollPosition, sectionTop);
 
     // Update the active section if the current section has more visible area
     if (visibleArea > maxVisibleArea) {
@@ -55,6 +82,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
+// Handles screen changes on resize
 window.addEventListener('resize', function() {
   const menu_icon_container = document.getElementById("menu-icon-container");
   var screenWidth = window.innerWidth;
@@ -71,20 +99,33 @@ window.addEventListener('resize', function() {
     dropdown_menu.classList.add('hidden');
     menu_close.classList.add("hidden");
   }
+
+  // if (isOffTop) {
+  //   var distanceOffTop = Math.abs(productRect.top);
+  //   var product = sections[0];
+  //   product.style.paddingTop = distanceOffTop + topBarHeight + 'px';
+  //   console.log('Distance off the top of the screen:', distanceOffTop, 'pixels');
+  // }
+  // else {
+  //   product.style.paddingTop = 0 + 'px';
+  // }
 });
 
+// Handles menu open button clicks
 menu_open.addEventListener("click", function() { 
   dropdown_menu.classList.remove('hidden');
   menu_open.classList.add("hidden");
   menu_close.classList.remove("hidden");
 });
 
+// Handles menu close button clicks
 menu_close.addEventListener("click", function() { 
   dropdown_menu.classList.add('hidden');
   menu_open.classList.remove("hidden");
   menu_close.classList.add("hidden");
 });
 
+// Displays gold headphones on click
 gold_btn.addEventListener("click", function() {
     gold_img.classList.remove("hidden");
     black_img.classList.add("hidden");
@@ -92,6 +133,7 @@ gold_btn.addEventListener("click", function() {
     document.documentElement.style.setProperty("--hover-color", "#D4AF37");
 });
 
+// Displays black headphones on click
 black_btn.addEventListener("click", function() {
     black_img.classList.remove("hidden");
     gold_img.classList.add("hidden");
@@ -99,6 +141,7 @@ black_btn.addEventListener("click", function() {
     document.documentElement.style.setProperty("--hover-color", "#777777");
 });
 
+// Displays white headphones on click
 white_btn.addEventListener("click", function() {
     white_img.classList.remove("hidden");
     black_img.classList.add("hidden");
