@@ -1,7 +1,6 @@
 
 /* ------------------------------ Constants ------------------------------ */
 const nav_elements = document.querySelectorAll('.active-section li');
-const dropdown_elements = document.querySelectorAll('.dropdown-menu .active-section li');
 
 const top_bar = document.getElementById("top-bar");
 const sections = document.querySelectorAll('section');
@@ -20,6 +19,8 @@ const gold_img = document.getElementById("gold");
 const black_img = document.getElementById("black");
 const white_img = document.getElementById("white");
 
+const sourround_sound_info = document.getElementById("surround-sound-info");
+
 /* -------------------------- Global Variables -------------------------- */
 var topBarHeight = top_bar.offsetHeight;
 var screenWidth = window.innerWidth;
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     dynamicScreen()
     dynamicSectionPadding();
     keepOnScreen();
+    window.scrollTo(0, 0);
   });
 });
 
@@ -41,8 +43,9 @@ window.addEventListener('scroll', () => {
   const viewportHeight = window.innerHeight;
 
   // Find the section that is currently taking up the most of the viewport
-  let maxVisibleArea = 0;
-  let activeSectionId = '';
+  var maxVisibleArea = 0;
+  var activeSectionId = '';
+
 
   // Iterate over each section
   document.querySelectorAll('section').forEach(section => {
@@ -66,15 +69,6 @@ window.addEventListener('scroll', () => {
       element.querySelector('a').classList.remove('highlight');
     });
     activeNavElement.classList.add('highlight');
-  }
-
-  // Find the corresponding dropdown menu element and add the highlight class
-  const activeDropdownElement = document.querySelector(`.dropdown-menu .active-section li a[href="#${activeSectionId}"]`);
-  if (activeDropdownElement) {
-    dropdown_elements.forEach(element => {
-      element.querySelector('a').classList.remove('highlight');
-    });
-    activeDropdownElement.classList.add('highlight');
   }
 });
 
@@ -143,9 +137,13 @@ function dynamicScreen() {
 
 // Adds padding to each sections dynamically
 function dynamicSectionPadding() {
+  var features = sections[1];
   var howItWorks = sections[2];
   var techSpecs = sections[3];
-  howItWorks.style.paddingTop = topBarHeight + topBarHeight/4 + 'px';
+  if (sourround_sound_info.offsetTop < topBarHeight) {
+    features.style.paddingTop = topBarHeight + topBarHeight/4 + 'px';
+  }
+  howItWorks.style.paddingTop = topBarHeight + topBarHeight/3 + 'px';
   techSpecs.style.paddingTop = topBarHeight + topBarHeight/3 + 'px';
 }
 
@@ -161,7 +159,6 @@ function keepOnScreen() {
     productPadding =  distanceOffTop - distanceOffTop/4;
     product.style.paddingTop = productPadding + 'px';
     product.style.paddingBottom = productPadding/2 + 'px';
-    console.log('Distance off the top of the screen:', distanceOffTop, 'pixels');
   }
   else {
     var zero = 0;
