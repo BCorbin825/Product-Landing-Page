@@ -1,11 +1,10 @@
 
 /* ------------------------------ Constants ------------------------------ */
 const nav_elements = document.querySelectorAll('.active-section li');
-
+const menu_icon_container = document.getElementById("menu-icon-container");
 const top_bar = document.getElementById("top-bar");
-const sections = document.querySelectorAll('section');
 
-const product_wrapper = document.getElementById('product-wrapper');
+const sections = document.querySelectorAll('section');
 
 const menu_open = document.getElementById("menu-btn");
 const menu_close = document.getElementById("menu-close-btn");
@@ -21,18 +20,12 @@ const white_img = document.getElementById("white");
 
 const sourround_sound_info = document.getElementById("surround-sound-info");
 
-/* -------------------------- Global Variables -------------------------- */
-var topBarHeight = top_bar.offsetHeight;
-var screenWidth = window.innerWidth;
-var screenHeight = window.innerHeight;
-
 /* ---------------------------- Dynamic code ---------------------------- */
 document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('load', function() {
     window.scrollTo(0, 0);
-    dynamicScreen()
+    dynamicScreen();
     dynamicSectionPadding();
-    // keepOnScreen();
   });
 });
 
@@ -74,8 +67,8 @@ window.addEventListener('scroll', () => {
 
 // Handles screen changes on resize
 window.addEventListener('resize', function() {
-  dynamicScreen();
   dynamicSectionPadding();
+  dynamicScreen();
 });
 
 // Handles menu open button clicks
@@ -119,26 +112,29 @@ white_btn.addEventListener("click", function() {
 /* --------------------------- Functions --------------------------- */
 // Display page differently based on screen size
 function dynamicScreen() {
-  const menu_icon_container = document.getElementById("menu-icon-container");
+  let screenWidth = window.innerWidth;
+  let screenHeight = window.innerHeight;
 
   if (screenWidth <= 1000 && screenHeight > 600) {
     menu_icon_container.classList.remove("hidden");
-    if (menu_close.classList.contains("hidden")) {
-      menu_open.classList.remove("hidden");
-    }
   }
-  else if (screenWidth > 1000) {
+  if (screenWidth > 1000 || screenHeight < 600) {
     menu_icon_container.classList.add("hidden");
     dropdown_menu.classList.add('hidden');
+    menu_open.classList.remove("hidden");
     menu_close.classList.add("hidden");
   }
 }
 
 // Adds padding to each sections dynamically
 function dynamicSectionPadding() {
-  var features = sections[1];
-  var howItWorks = sections[2];
-  var techSpecs = sections[3];
+  let features = sections[1];
+  let howItWorks = sections[2];
+  let techSpecs = sections[3];
+
+  let screenWidth = window.innerWidth;
+  let topBarHeight = top_bar.offsetHeight;
+
   if (sourround_sound_info.offsetTop < topBarHeight && screenWidth <= 1000) {
     features.style.paddingTop = topBarHeight + 'px';
     features.style.marginTop = 0 + 'px';
@@ -146,28 +142,3 @@ function dynamicSectionPadding() {
   howItWorks.style.paddingTop = topBarHeight + topBarHeight/3 + 'px';
   techSpecs.style.paddingTop = topBarHeight + topBarHeight/3 + 'px';
 }
-
-// Keeps product section from going off top of screen
-// function keepOnScreen() {
-//   var product = sections[0];
-//   var productRect = product.getBoundingClientRect();
-//   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//   var isOffTop = (productRect.top + scrollTop) < scrollTop;
-
-//   if (isOffTop) {
-//     var distanceOffTop = Math.abs(productRect.top);
-//     productPadding =  distanceOffTop - distanceOffTop/4;
-//     product.style.paddingTop = productPadding + 'px';
-//     product.style.paddingBottom = productPadding/2 + 'px';
-//   }
-//   else {
-//     var zero = 0;
-//     if (screenWidth <= 1000 && screenHeight >= 600) {
-//       product.style.paddingTop = '1.5vmax';
-//     }
-//     else {
-//       product.style.paddingTop = '6vh';
-//     }
-//     product.style.paddingBottom = zero + 'px';
-//   }
-// }
