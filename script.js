@@ -20,7 +20,10 @@ const gold_img = document.getElementById("gold");
 const black_img = document.getElementById("black");
 const white_img = document.getElementById("white");
 
+/* -------------------------- Global Variables -------------------------- */
 var topBarHeight = top_bar.offsetHeight;
+var screenWidth = window.innerWidth;
+var screenHeight = window.innerHeight;
 
 /* ---------------------------- Dynamic code ---------------------------- */
 document.addEventListener('DOMContentLoaded', function() {
@@ -124,8 +127,6 @@ white_btn.addEventListener("click", function() {
 // Display page differently based on screen size
 function dynamicScreen() {
   const menu_icon_container = document.getElementById("menu-icon-container");
-  var screenWidth = window.innerWidth;
-  var screenHeight = window.innerHeight;
 
   if (screenWidth <= 1000 && screenHeight > 600) {
     menu_icon_container.classList.remove("hidden");
@@ -164,7 +165,12 @@ function keepOnScreen() {
   }
   else {
     var zero = 0;
-    product.style.paddingTop =  '6vh';
+    if (screenWidth <= 1000 && screenHeight >= 600) {
+      product.style.paddingTop = '1.5vmax';
+    }
+    else {
+      product.style.paddingTop = '6vh';
+    }
     product.style.paddingBottom = zero + 'px';
   }
 }
