@@ -440,7 +440,6 @@ button {
   flex-direction: column;
   justify-content: center;
   overflow-y: hidden;
-  padding: 9vmin 0 2vmin 0;
 }
 
 .info-container {
@@ -578,6 +577,12 @@ button {
   }
 }
 
+@media (min-width: 1001px) and (max-height: 850px) {
+  #product {
+    padding-top: 10%;
+  }
+}
+
 @media (max-width: 1000px) and (max-height: 600px) {
   #logo h1 {
     font-size: 1.4rem;
@@ -586,6 +591,10 @@ button {
   #header-img {
     height: 4.5vmin;
     min-height: 32px;
+  }
+
+  #product {
+    padding-top: 12%;
   }
 
   .product-img {
@@ -603,7 +612,7 @@ button {
   }
 }
 
-@media (max-width: 1000px) and (min-height: 600px) {
+@media ((max-width: 1000px) and (min-height: 600px)) or (max-width: 675px) {
   #logo h1 {
     padding-left: 5px;
     font-size: 1.6rem;
@@ -623,7 +632,7 @@ button {
   }
 
   #product {
-    padding-top: 14vh;
+    padding-top: 14vmax;
   }
 
   #product-wrapper {

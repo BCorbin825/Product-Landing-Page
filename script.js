@@ -5,6 +5,9 @@ const menu_icon_container = document.getElementById("menu-icon-container");
 const top_bar = document.getElementById("top-bar");
 
 const sections = document.querySelectorAll('section');
+const features = sections[1];
+const howItWorks = sections[2];
+const techSpecs = sections[3];
 
 const menu_open = document.getElementById("menu-btn");
 const menu_close = document.getElementById("menu-close-btn");
@@ -18,7 +21,7 @@ const gold_img = document.getElementById("gold");
 const black_img = document.getElementById("black");
 const white_img = document.getElementById("white");
 
-const sourround_sound_info = document.getElementById("surround-sound-info");
+const feature_container = document.getElementById("feature-container");
 
 /* ---------------------------- Dynamic code ---------------------------- */
   window.addEventListener('load', function() {
@@ -113,10 +116,10 @@ function dynamicScreen() {
   let screenWidth = window.innerWidth;
   let screenHeight = window.innerHeight;
 
-  if (screenWidth <= 1000 && screenHeight > 600) {
+  if ((screenWidth <= 1000 && screenHeight > 600) || screenWidth <= 675) {
     menu_icon_container.classList.remove("hidden");
   }
-  if (screenWidth > 1000 || screenHeight < 600) {
+  if (screenWidth > 1000 || (screenHeight < 600 && screenWidth > 675)) {
     menu_icon_container.classList.add("hidden");
     dropdown_menu.classList.add('hidden');
     menu_open.classList.remove("hidden");
@@ -124,18 +127,14 @@ function dynamicScreen() {
   }
 }
 
-// Adds padding to each sections dynamically
+// Adds padding to each section dynamically
 function dynamicSectionPadding() {
-  let features = sections[1];
-  let howItWorks = sections[2];
-  let techSpecs = sections[3];
-
-  let screenWidth = window.innerWidth;
+  console.log("Reached")
   let topBarHeight = top_bar.offsetHeight;
 
-  if (sourround_sound_info.offsetTop < topBarHeight && screenWidth <= 1000) {
-    features.style.paddingTop = topBarHeight + 'px';
-  }
-  howItWorks.style.padding = topBarHeight + topBarHeight/3 + 'px';
+  features.style.paddingTop = topBarHeight + 'px';
+  howItWorks.style.paddingTop = topBarHeight + 'px';
+  howItWorks.style.paddingBottom = topBarHeight + 'px';
   techSpecs.style.paddingTop = topBarHeight + topBarHeight/3 + 'px';
+  techSpecs.style.paddingBottom = topBarHeight + 'px';
 }
