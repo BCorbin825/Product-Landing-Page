@@ -21,13 +21,11 @@ const white_img = document.getElementById("white");
 const sourround_sound_info = document.getElementById("surround-sound-info");
 
 /* ---------------------------- Dynamic code ---------------------------- */
-document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('load', function() {
     window.scrollTo(0, 0);
     dynamicScreen();
     dynamicSectionPadding();
   });
-});
 
 // Handles highlighting the current section
 window.addEventListener('scroll', () => {
@@ -137,8 +135,7 @@ function dynamicSectionPadding() {
 
   if (sourround_sound_info.offsetTop < topBarHeight && screenWidth <= 1000) {
     features.style.paddingTop = topBarHeight + 'px';
-    features.style.marginTop = 0 + 'px';
   }
-  howItWorks.style.paddingTop = topBarHeight + topBarHeight/3 + 'px';
+  howItWorks.style.padding = topBarHeight + topBarHeight/3 + 'px';
   techSpecs.style.paddingTop = topBarHeight + topBarHeight/3 + 'px';
 }

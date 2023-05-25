@@ -194,11 +194,11 @@ button {
 /* ------------- Product Section ------------- */
 #product {
   display: flex;
-  height: 100vh;
-  width: 100vw;
   justify-content: center;
   align-items: center;
-  overflow-y: visible;
+  width: 100vw;
+  overflow-y: scroll;
+  padding-top: 7%;
 }
 
 #product-wrapper {
@@ -269,7 +269,7 @@ button {
 /* ------------ Features Section ------------- */
 #features {
   overflow-y: hidden;
-  padding-bottom: 10vmin;
+  padding: 5vh 0 10vmin 0;
 }
 
 .info {
@@ -311,7 +311,6 @@ button {
 
 #surround-sound-container h3 {
   font-size: 3.5vw;
-  padding-bottom: 1vmin;
 }
 
 #surround-sound-container p {
@@ -320,13 +319,9 @@ button {
   width: 30%;
 }
 
-#surround-sound-info {
-  transform: translateY(5vw);
-}
-
 #surround-sound-img {
   width: 65%;
-  margin-top: 10vmax;
+  height: auto;
 }
 
 .feature-container {
@@ -376,29 +371,30 @@ button {
 }
 
 #how-it-works {
-  /* margin-top: 75px; */
-  /* padding: 5vmin 0 13vmin 0; */
-  padding-bottom: 13vmin;
+  display: inline-flex;
+  /* padding-bottom: 6vmax; */
 }
 
 #how-it-works-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .how-it-works-container {
   display: flex;
-  justify-content: space-around;
   text-align: center;
-  /* padding: 4vmin 0 8vmin 0; */
-  padding-bottom: 8vmin;
+  padding-bottom: 5vmin;
 }
 
 .how-it-works-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 2vh 0;
 }
 
 .how-it-works-content h3 {
@@ -444,11 +440,8 @@ button {
   flex-direction: column;
   justify-content: center;
   overflow-y: hidden;
-}
-
-/* #tech-specs-container {
   padding: 9vmin 0 2vmin 0;
-} */
+}
 
 .info-container {
   display: grid;
@@ -630,7 +623,7 @@ button {
   }
 
   #product {
-    margin-top: 1.5vmax;
+    padding-top: 14vh;
   }
 
   #product-wrapper {
@@ -692,15 +685,8 @@ button {
   }
 
   #features {
-    margin-top: 10vh;
-  }
-
-  #surround-sound-container {
-    height: 120%;
-  }
-
-  #surround-sound-img {
-    margin-top: 0;
+    margin-top: 7vh;
+    padding-top: 7vh;
   }
 
   #surround-sound-container h3 {
@@ -712,12 +698,7 @@ button {
     width: 60%;
   }
   
-  #surround-sound-info {
-    transform: translateY(3vw);
-  }
-  
   #surround-sound-img {
-    margin-top: 7vh;
     width: 90%;
   }
 
