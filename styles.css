@@ -659,21 +659,21 @@ button {
 
   #product-title {
     margin-top: 20px;
-    font-size: 6.5vw;
+    font-size: 7.5vw;
   }
 
   #slogan {
-    font-size: 2.8vw;
+    font-size: 3.2vw;
     width: 100%;
   }
 
   #price {
     padding-top: 2vmax;
-    font-size: 5.2vw;
+    font-size: 6.5vw;
   }
 
   #add-to-cart {
-    font-size: 2.5vw;
+    font-size: 3.2vw;
     padding: 1.2vmax 3vmax;
     border: 0.2vw solid var(--text-color);
     border-radius: 0.4vmin;
@@ -685,7 +685,7 @@ button {
   }
 
   .color-img {
-    width: 12vw;
+    width: 15vw;
     margin: 0 5vw;
   }
 
