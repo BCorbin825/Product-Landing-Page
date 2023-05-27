@@ -129,12 +129,10 @@ function dynamicScreen() {
 
 // Adds padding to each section dynamically
 function dynamicSectionPadding() {
-  console.log("Reached")
   let topBarHeight = top_bar.offsetHeight;
 
   features.style.paddingTop = topBarHeight + 'px';
   howItWorks.style.paddingTop = topBarHeight + 'px';
   howItWorks.style.paddingBottom = topBarHeight + 'px';
-  techSpecs.style.paddingTop = topBarHeight + topBarHeight/3 + 'px';
-  techSpecs.style.paddingBottom = topBarHeight + 'px';
+  techSpecs.style.paddingTop = topBarHeight + 'px';
 }
