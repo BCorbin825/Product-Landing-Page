@@ -4,31 +4,30 @@ const nav_elements = document.querySelectorAll('.active-section li');
 const menu_icon_container = document.getElementById("menu-icon-container");
 const top_bar = document.getElementById("top-bar");
 
-const sections = document.querySelectorAll('section');
-const features = sections[1];
-const howItWorks = sections[2];
-const techSpecs = sections[3];
+const features = document.getElementById("features");
+const howItWorks = document.getElementById("how-it-works");
+const techSpecs = document.getElementById("tech-specs");
 
 const menu_open = document.getElementById("menu-btn");
 const menu_close = document.getElementById("menu-close-btn");
 const dropdown_menu = document.querySelector('.dropdown-menu');
+const dropdown_links = dropdown_menu.querySelectorAll('a');
 
-const gold_btn = document.getElementById("gold-button");
-const black_btn = document.getElementById("black-button");
-const white_btn = document.getElementById("white-button");
+const color_buttons = document.querySelectorAll('#color-img-container button');
+const product_imgs = document.querySelectorAll('.product-img');
 
-const gold_img = document.getElementById("gold");
-const black_img = document.getElementById("black");
-const white_img = document.getElementById("white");
+const add_to_cart = document.getElementById("add-to-cart");
 
-const feature_container = document.getElementById("feature-container");
+const form = document.getElementById("form");
+const form_message = document.getElementById("form-message");
 
 /* ---------------------------- Dynamic code ---------------------------- */
   window.addEventListener('load', function() {
     window.scrollTo(0, 0);
-    dynamicScreen();
     dynamicSectionPadding();
   });
+
+document.getElementById("copyright-year").textContent = new Date().getFullYear();
 
 // Handles highlighting the current section
 window.addEventListener('scroll', () => {
@@ -46,7 +45,7 @@ window.addEventListener('scroll', () => {
     // Get the offset top, height, and visible area of the section
     const sectionTop = section.offsetTop;
     const sectionHeight = section.offsetHeight;
-    const visibleArea = Math.min(scrollPosition + viewportHeight, sectionTop + sectionHeight) - 
+    const visibleArea = Math.min(scrollPosition + viewportHeight, sectionTop + sectionHeight) -
                         Math.max(scrollPosition, sectionTop);
 
     // Update the active section if the current section has more visible area
@@ -69,62 +68,61 @@ window.addEventListener('scroll', () => {
 // Handles screen changes on resize
 window.addEventListener('resize', function() {
   dynamicSectionPadding();
-  dynamicScreen();
+
+  // Close the dropdown once the menu icon is hidden by the CSS breakpoint
+  if (getComputedStyle(menu_icon_container).display === 'none') {
+    closeMenu();
+  }
 });
 
 // Handles menu open button clicks
-menu_open.addEventListener("click", function() { 
+menu_open.addEventListener("click", function() {
   dropdown_menu.classList.remove('hidden');
   menu_open.classList.add("hidden");
   menu_close.classList.remove("hidden");
 });
 
 // Handles menu close button clicks
-menu_close.addEventListener("click", function() { 
-  dropdown_menu.classList.add('hidden');
-  menu_open.classList.remove("hidden");
-  menu_close.classList.add("hidden");
+menu_close.addEventListener("click", closeMenu);
+
+// Closes the menu after picking a section
+dropdown_links.forEach(link => {
+  link.addEventListener("click", closeMenu);
 });
 
-// Displays gold headphones on click
-gold_btn.addEventListener("click", function() {
-    gold_img.classList.remove("hidden");
-    black_img.classList.add("hidden");
-    white_img.classList.add("hidden");
-    document.documentElement.style.setProperty("--hover-color", "#D4AF37");
+// Displays the selected headphone color on click
+color_buttons.forEach(button => {
+  button.addEventListener("click", function() {
+    product_imgs.forEach(img => {
+      img.classList.toggle("hidden", img.id !== button.dataset.color);
+    });
+    document.documentElement.style.setProperty("--hover-color", button.dataset.hoverColor);
+  });
 });
 
-// Displays black headphones on click
-black_btn.addEventListener("click", function() {
-    black_img.classList.remove("hidden");
-    gold_img.classList.add("hidden");
-    white_img.classList.add("hidden");
-    document.documentElement.style.setProperty("--hover-color", "#777777");
+// Shows confirmation after adding to cart
+add_to_cart.addEventListener("click", function() {
+  add_to_cart.textContent = "Added!";
+  add_to_cart.disabled = true;
+  setTimeout(function() {
+    add_to_cart.textContent = "Add To Cart";
+    add_to_cart.disabled = false;
+  }, 1500);
 });
 
-// Displays white headphones on click
-white_btn.addEventListener("click", function() {
-    white_img.classList.remove("hidden");
-    black_img.classList.add("hidden");
-    gold_img.classList.add("hidden");
-    document.documentElement.style.setProperty("--hover-color", "#ededed");
+// Handles newsletter signup
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  form.reset();
+  form_message.classList.remove("hidden");
 });
 
 /* --------------------------- Functions --------------------------- */
-// Display page differently based on screen size
-function dynamicScreen() {
-  let screenWidth = window.innerWidth;
-  let screenHeight = window.innerHeight;
-
-  if ((screenWidth <= 1000 && screenHeight > 600) || screenWidth <= 675) {
-    menu_icon_container.classList.remove("hidden");
-  }
-  if (screenWidth > 1000 || (screenHeight < 600 && screenWidth > 675)) {
-    menu_icon_container.classList.add("hidden");
-    dropdown_menu.classList.add('hidden');
-    menu_open.classList.remove("hidden");
-    menu_close.classList.add("hidden");
-  }
+// Closes the dropdown menu
+function closeMenu() {
+  dropdown_menu.classList.add('hidden');
+  menu_open.classList.remove("hidden");
+  menu_close.classList.add("hidden");
 }
 
 // Adds padding to each section dynamically

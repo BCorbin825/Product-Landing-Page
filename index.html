@@ -27,9 +27,9 @@
       </nav>
       <div class="icon-wrapper">
         <div class="icon" id="shopping-cart">
-          <a href="#"><i class="gg-shopping-cart"></i></a>
+          <a href="#product" aria-label="Cart"><i class="gg-shopping-cart"></i></a>
         </div>
-        <div class="icon hidden" id="menu-icon-container">
+        <div class="icon" id="menu-icon-container">
           <button id="menu-btn">
             <i class="gg-menu" id="menu-icon"></i>
           </button>
@@ -55,6 +55,7 @@
           <img class="float product-img" id="gold" src="Images/Headphones-Gold.png" alt="Product Image Gold" />
           <img class="float product-img hidden" id="black" src="Images/Headphones-Black.png" alt="Product Image Black" />
           <img class="float product-img hidden" id="white" src="Images/Headphones-White.png" alt="Product Image White" />
+          <img class="float product-img hidden" id="skyblue" src="Images/Headphones-SkyBlue.png" alt="Product Image Sky Blue" />
         </div>
         <div id="product-content">
           <h1 id="product-title">Wireless Headphones</h1>
@@ -62,14 +63,17 @@
           <h2 id="price">$149.99</h2>
           <button id="add-to-cart">Add To Cart</button>
           <div id="color-img-container">
-            <button class="hover-grow" id="gold-button">
+            <button class="hover-grow" id="gold-button" data-color="gold" data-hover-color="#D4AF37">
               <img class="color-img" src="Images/Headphones-Gold-Icon.png" alt="Gold Headphones">
             </button>
-            <button class="hover-grow" id="black-button">
+            <button class="hover-grow" id="black-button" data-color="black" data-hover-color="#777777">
               <img class="color-img" src="Images/Headphones-Black-Icon.png" alt="Black Headphones">
             </button>
-            <button class="hover-grow" id="white-button">
+            <button class="hover-grow" id="white-button" data-color="white" data-hover-color="#ededed">
               <img class="color-img" src="Images/Headphones-White-Icon.png" alt="White Headphones">
+            </button>
+            <button class="hover-grow" id="skyblue-button" data-color="skyblue" data-hover-color="#87CEEB">
+              <img class="color-img" src="Images/Headphones-SkyBlue-Icon.png" alt="Sky Blue Headphones">
             </button>
           </div>
         </div>
@@ -107,25 +111,26 @@
           </div>
           <img id="beats-comfort-img" src="Images/Beats-comfort.jpg" alt="Comfort Experience">
         </div>
-        <div class="info" data-aos="zoom-out" data-aos-duration="1000">
-          <video id="video" src="#" controls></video>
-        </div>
       </div>
     </section>
     
     <!-------- How It Works -------->
     <section class="background-color-white" id="how-it-works">
       <div id="how-it-works-wrapper">
+        <h2 class="section-title">How It Works</h2>
         <div class="how-it-works-container">
           <div class="how-it-works-content" data-aos="fade-down" data-aos-duration="1200">
+            <span class="step-number">1</span>
             <h3>Turn On</h3>
             <p>Simply press and hold the side button to turn on your AeroBeats headphones.</p>
           </div>
           <div class="how-it-works-content" data-aos="fade-down" data-aos-duration="1200">
+            <span class="step-number">2</span>
             <h3>Pair</h3>
             <p>Pair your headphones with your device using Bluetooth for a seamless connection.</p>
           </div>
           <div class="how-it-works-content" data-aos="fade-down" data-aos-duration="1200">
+            <span class="step-number">3</span>
             <h3>Enjoy</h3>
             <p>Once connected, enjoy high-quality wireless audio with AeroBeats headphones.</p>
           </div>
@@ -141,6 +146,7 @@
 
     <!-------- Tech Specs -------->
     <section id="tech-specs">
+      <h2 class="section-title">Tech Specs</h2>
       <div class="info-container" id="tech-specs-container" data-aos="fade-down" data-aos-duration="1500">
         <div class="align" id="connectivity-content">
           <h3>Connectivity</h3>
@@ -239,8 +245,8 @@
               <p>IPX4-rated for protection against light moisture</p> 
             </li>
             <li>
-              <h4>Audio Codec Support</h4>
-              <p>SBC, AAC</p> 
+              <h4>Voice Assistant</h4>
+              <p>One-touch access to Siri and Google Assistant</p>
             </li>
           </ul>
         </div>
@@ -256,11 +262,12 @@
         <input type="email" id="email" name="email" placeholder="Enter your email address" required>
         <input type="submit" id="submit" value="Submit">
       </form>
+      <p class="hidden" id="form-message">Thanks for subscribing!</p>
     </section>
 
     <!------- Copyright ------->
     <div class="copyright">
-      <p>&copy; 2023 AeroBeats. All rights reserved.</p>
+      <p>&copy; <span id="copyright-year">2026</span> AeroBeats. All rights reserved.</p>
       <p>This website is for educational purposes only and does not represent or endorse any brand or product, including Beats headphones.</p>
       <p>The images used are for illustrative purposes only.</p>
     </div> 

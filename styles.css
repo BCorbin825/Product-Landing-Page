@@ -2,6 +2,8 @@
 :root {
   --text-color: #ededed;
   --hover-color: #D4AF37;
+  /* Scale unit: tracks width but stops growing on wide or short screens */
+  --u: min(1vw, 1.5vh);
 }
 
 /* ----------------------------------- Styling ----------------------------------- */
@@ -56,24 +58,8 @@ button {
   display: none;
 }
 
-.title-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 80px;
-}
-
-.title-container h2 {
-  font-size: 6rem;
-  margin-top: 60px;
-  margin-bottom: 10px;
-}
-
 .float {
   animation: float 2.5s ease-in-out infinite;
-}
-
-.rotate-90 {
-  transform: rotate(90deg);
 }
 
 /* ------------- Top Bar Section ------------- */
@@ -182,6 +168,10 @@ button {
   font-size: 2.8vmax;
 }
 
+#menu-icon-container {
+  display: none;
+}
+
 #menu-icon {
   margin-bottom: 2px;
   transition: 0.4s;
@@ -197,7 +187,6 @@ button {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  overflow-y: scroll;
   padding-top: 5%;
 }
 
@@ -206,42 +195,42 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateX(-3vw);
+  transform: translateX(calc(-3 * var(--u)));
   overflow-y: visible;
 }
 
 .product-img {
-  width: 33vmax;
+  width: calc(33 * var(--u));
 }
 
 #product-content {
   width: 25%;
   transform: translateY(-3vh);
-  margin-left: 5vw;
+  margin-left: calc(5 * var(--u));
 }
 
 #product-title {
   font-weight: 900;
-  font-size: 5vw;
+  font-size: calc(5 * var(--u));
   line-height: 1.2;
 }
 
 #slogan {
   padding-top: 0.8vh;
   font-weight: 100;
-  font-size: 1vw;
+  font-size: calc(1 * var(--u));
 }
 
 #price {
-  font-size: 3vw;
+  font-size: calc(3 * var(--u));
   padding-top: 4.5vh;
   padding-bottom: 2.4vh;
 }
 
 #add-to-cart {
   font-weight: 700;
-  font-size: 1vw;
-  padding: 1vw 2.5vw;
+  font-size: calc(1 * var(--u));
+  padding: calc(1 * var(--u)) calc(2.5 * var(--u));
   border: 0.2vh solid var(--text-color);
   border-radius: 0.4vh;
   color: var(--text-color);
@@ -262,8 +251,8 @@ button {
 }
 
 .color-img {
-  width: 6vw;
-  margin-right: 3vw;
+  width: calc(5 * var(--u));
+  margin-right: calc(2 * var(--u));
 }
 
 /* ------------ Features Section ------------- */
@@ -281,14 +270,14 @@ button {
 }
 
 .info h3 {
-  font-size: 3.5vw;
+  font-size: calc(3.5 * var(--u));
   padding-bottom: 20px;
 }
 
 .info p {
-  font-size: 1.3vw;
+  font-size: calc(1.3 * var(--u));
   word-spacing: 3px;
-  width: 30%;
+  width: calc(30 * var(--u));
 }
 
 .feature-info-container {
@@ -310,17 +299,17 @@ button {
 }
 
 #surround-sound-container h3 {
-  font-size: 3.5vw;
+  font-size: calc(3.5 * var(--u));
 }
 
 #surround-sound-container p {
-  font-size: 1.3vw;
+  font-size: calc(1.3 * var(--u));
   word-spacing: 3px;
-  width: 30%;
+  width: calc(30 * var(--u));
 }
 
 #surround-sound-img {
-  width: 65%;
+  width: calc(65 * var(--u));
   height: auto;
 }
 
@@ -331,20 +320,20 @@ button {
 }
 
 #beats-lebron-img {
-  width: 70%;
+  width: calc(70 * var(--u));
 }
 
 #wireless-container {
-  transform: translateX(-18%);
+  transform: translateX(calc(-18 * var(--u)));
 }
 
 #beats-battery-img {
-  width: 80%;
+  width: calc(80 * var(--u));
   transform: scaleX(-1);
 }
 
 #battery-life-container {
-  transform: translateX(22%);
+  transform: translateX(calc(22 * var(--u)));
 }
 
 #battery-life-header, #battery-life-description {
@@ -352,16 +341,11 @@ button {
 }
 
 #beats-comfort-img {
-  width: 70%;
+  width: calc(70 * var(--u));
 }
 
 #comfort-container {
-  transform: translateX(-19%);
-}
-
-#video {
-  width: 70vw;
-  border: 1px solid var(--text-color);
+  transform: translateX(calc(-19 * var(--u)));
 }
 
 /* -------- How It Works Section ------- */
@@ -371,65 +355,92 @@ button {
 }
 
 #how-it-works {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
 }
 
 #how-it-works-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+  letter-spacing: -0.02em;
+  margin: 48px 0 40px 0;
 }
 
 .how-it-works-container {
-  display: flex;
-  text-align: center;
-  padding-bottom: 5vmin;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
 }
 
 .how-it-works-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  padding: 32px 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  padding: 2vh 0;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  background: #111111;
+  color: var(--text-color);
+  font-size: 1rem;
 }
 
 .how-it-works-content h3 {
-  font-size: 4.5vw;
-  border-bottom: 2px solid black;
-  padding-bottom: 10px;
-  margin-top: -15px;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
 }
 
 .how-it-works-content p {
-  font-size: 1.7vw;
-  width: 75%;
-  padding-top: 10px;
+  font-size: 0.95rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #444444;
 }
 
 #controls-img-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  container-type: inline-size;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 #controls-img {
-  width: 70%;
+  display: block;
+  width: 100%;
+  border-radius: 12px;
 }
 
+/* Sits over the dark left side of the image; sized relative to the image */
 #controls-description-container {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  width: 30%;
-  transform: translateX(-55%);
+  top: 50%;
+  left: 5%;
+  width: 43%;
+  transform: translateY(-50%);
 }
 
 #controls-description {
   text-align: center;
-  font-size: 1.95vw;
+  font-size: 2.8cqw;
   color: var(--text-color);
 }
 
@@ -437,56 +448,61 @@ button {
 #tech-specs {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   overflow-y: hidden;
+  padding-bottom: 64px;
 }
 
 .info-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: 0 3.5vmin;
+  gap: 24px;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
 .align {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
 }
 
 .align h3 {
-  font-size: 2.5vw;
-  border-bottom: 0.4vmax solid var(--text-color);
-  border-radius: 0.8vmax;
+  font-size: 1.1rem;
+  padding-bottom: 14px;
+  margin-bottom: 4px;
+  border-bottom: 2px solid var(--hover-color);
 }
 
 .tech-specs-ul {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 10px 30px 10px;
 }
 
 .tech-specs-ul li {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 20px 0 30px 0;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tech-specs-ul li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .tech-specs-ul h4 {
-  width: 40%;
-  font-size: 1.4vw;
-  display: flex;
-  justify-content: flex-start;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #999999;
+  margin-bottom: 4px;
 }
 
 .tech-specs-ul p {
-  width: 60%;
-  font-size: 1.2vw;
-  display: flex;
-  justify-content: center;
-  text-align: center;
+  font-size: 0.95rem;
+  font-weight: normal;
+  line-height: 1.5;
 }
 
 /* --------- Form --------- */
@@ -500,7 +516,7 @@ button {
 
 #form-title {
   color: #111111;
-  font-size: 2.4vw;
+  font-size: calc(2.4 * var(--u));
 }
 
 #form-title-container {
@@ -519,34 +535,41 @@ button {
 
 #email {
   width: 100%;
-  padding: 0.6vw;
+  padding: calc(0.6 * var(--u));
   margin-bottom: 1vmin;
   border: 1px solid #ccc;
   border-radius: 0.4vmin;
-  font-size: 1.5vw;
+  font-size: calc(1.5 * var(--u));
   text-align: center;
 }
 
 #submit {
   width: 80%;
-  padding: 0.6vw;
+  padding: calc(0.6 * var(--u));
   background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 0.4vmin;
   cursor: pointer;
-  font-size: 1.5vw;
+  font-size: calc(1.5 * var(--u));
 }
 
 #submit:hover {
   background-color: #45a049;
 }
 
+#form-message {
+  color: #111111;
+  text-align: center;
+  font-size: calc(1.5 * var(--u));
+  padding-bottom: 2%;
+}
+
 /* ----- Copyright ----- */
 .copyright {
   text-align: center;
   margin-top: 2vh;
-  font-size: 0.8vw;
+  font-size: calc(0.8 * var(--u));
   color: #666;
   line-height: 1.4;
 }
@@ -592,10 +615,6 @@ button {
     padding-top: 12%;
   }
 
-  .product-img {
-    width: 30vmax;
-  }
-
   .nav-link {
     font-size: 1rem;
     margin: 0 15px;
@@ -623,6 +642,7 @@ button {
   }
 
   #menu-icon-container {
+    display: block;
     margin-right: 3.5vw;
   }
 
@@ -680,8 +700,8 @@ button {
   }
 
   .color-img {
-    width: 15vw;
-    margin: 0 5vw;
+    width: 13vw;
+    margin: 0 3vw;
   }
 
   #nav-list .nav-link {
@@ -742,47 +762,8 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .align h3 {
-    font-size: 4vw;
-  }
-  
-  .tech-specs-ul {
-    padding: 10px 5px 15px 5px;
-  }
-  
-  .tech-specs-ul li {
-    padding: 15px 0 25px 0;
-  }
-  
-  .tech-specs-ul h4 {
-    font-size: 2.3vw;
-  }
-  
-  .tech-specs-ul p {
-    font-size: 1.8vw;
-  }
-  
-  .how-it-works-content h3 {
-    font-size: 6vw;
-    padding-bottom: 5px;
-  }
-  
-  .how-it-works-content p {
-    font-size: 2vw;
-    width: 90%;
-  }
-  
-  #controls-img {
-    width: 80%;
-  }
-  
-  #controls-description-container {
-    width: 36%;
-    transform: translateX(-54%);
-  }
-  
-  #controls-description {
-    font-size: 2.3vw;
+  .how-it-works-content {
+    padding: 24px 16px;
   }
 
   #form-title {
@@ -801,6 +782,10 @@ button {
   #submit {
     font-size: 2.5vw;
     width: 130%;
+  }
+
+  #form-message {
+    font-size: 2.5vw;
   }
 
   .copyright {
@@ -823,6 +808,10 @@ button {
   .dropdown-menu {
     left: 5vw;
     width: unset;
+  }
+
+  .how-it-works-container, .info-container {
+    grid-template-columns: 1fr;
   }
 }
 
